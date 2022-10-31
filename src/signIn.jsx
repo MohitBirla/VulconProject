@@ -28,7 +28,7 @@ export default function SignIn() {
                 {/* <label className='text-white mt-3' style={{letterSpacing:"2px"}}>Forgot your password? <a href='#' style={{color:'orange',textDecoration:'none'}}>Reset Now</a> </label> */}
                 <label className='text-white mt-3' style={{ letterSpacing: "2px" }}>Don’t have an account?<a href='#' className='dontAccount' style={{ color: 'orange', textDecoration: 'none' }}>Sign Up</a> </label>
 
-              </Form>
+              </Form>   
             </div>
           </div>
         </div>
