@@ -21,7 +21,7 @@ function Project(props) {
         <Router>
             <Navbar bg="dark" expand="lg">
                 <Container fluid>
-                    <Navbar.Brand href="#" className='text-white'>Dollop</Navbar.Brand>
+                    <Navbar.Brand href="#" className='text-white'>Dollop shiv</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
@@ -44,6 +44,9 @@ function Project(props) {
             </Navbar>
             <Routes>
               <Route path="/signIn" element ={<SignIn/>}/>
+
+
+
 
             </Routes>
             </Router>
