@@ -5,7 +5,7 @@ import Sidenav from './Sidenav'
 
 export default function Dashboard() {
   return (
-    <div className='row '>
+    <div className='row main_dashboard'>
         <div className='col-3 text-white'>
             <Sidenav/>
         </div>
