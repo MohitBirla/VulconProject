@@ -30,3 +30,11 @@ body {
 .dontAccount:hover {
   color: rgb(240, 58, 58) !important;
 }
+
+/* ////////////////////////////////// media Queries /////////////////////////////////////////////// */
+
+@media screen and (max-width: 1200px) {
+  .signInCarousel {
+    display: none;
+  }
+}
