@@ -1,27 +1,32 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Rubik",sans-serif;
+  font-family: "Rubik", sans-serif;
   overflow-x: hidden;
 }
-body{
-  background:#181714 !important;
+
+body {
+  background: #181714 !important;
 }
-.loginMain{
+
+.loginMain {
   background-image: url(../public/images/newbgForm.webp);
   background-repeat: no-repeat;
   background-size: cover;
 }
-.loginsBtn{
+
+.loginsBtn {
   border: none !important;
   border-radius: 10px;
   font-size: 1.2rem;
-  width: 100%;
+  ;
 }
-.loginsBtn:hover{
+
+.loginsBtn:hover {
   color: red !important;
 }
-.dontAccount:hover{
-color: rgb(240, 58, 58) !important;
+
+.dontAccount:hover {
+  color: rgb(240, 58, 58) !important;
 }

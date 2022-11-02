@@ -2,12 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
-import Project from './project';
+import Project from './components/Home/project';
 
 function App() {
   return (
     <>
-    <Project/>
+      <Project />
     </>
   );
 }

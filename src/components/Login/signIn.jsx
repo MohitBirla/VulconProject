@@ -1,12 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BsGoogle } from "react-icons/bs";
 import { BsWalletFill } from "react-icons/bs";
 import Form from 'react-bootstrap/Form';
+import { Web3Modal } from '@web3modal/react'
+import { Web3Button, useAccount } from '@web3modal/react';
+import Modal from 'react-bootstrap/Modal';
+import LoginModal from './LoginModal';
 
+const config = {
+  projectId: '77a7ee281a308d086ddd3e231804d56d',
+  theme: 'dark',
+  accentColor: 'default',
+  ethereum: {
+    appName: 'web3Modal'
+  }
+}
 
 export default function SignIn() {
+  const [show, setShow] = useState(false);
 
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
+  const { account } = useAccount()
   document.getElementById('example')
   return (
     <div className='main-container' style={{ overFlow: 'hidden' }}>
@@ -18,17 +34,28 @@ export default function SignIn() {
                 <p className='text-white fw-bold '>XYZ Forged</p>
                 <h1 className='text-white fw-bold pt-2 pb-2'>Sign in</h1>
                 <p className='text-white mt-3 ' style={{ letterSpacing: "2px" }}>Sign In to your account by filling following details.</p>
-                <button type='button' className='loginsBtn fw-bold p-2 mt-4' style={{ backgroundColor: "#4FA095", color: "#27262C",  }}>
-                  <BsGoogle className='mx-3' />Login with Google
-                </button>
-                <h6 className='text-white my-2 text-center mt-4 fw-bold'>OR</h6>
-                <button type='button' className='loginsBtn fw-bold p-2 mt-2' style={{ backgroundColor: "#9BA17B", color: "#27262C", }}>
-                  <BsWalletFill className='mx-3' />Login with Wallet
-                </button>
-                {/* <label className='text-white mt-3' style={{letterSpacing:"2px"}}>Forgot your password? <a href='#' style={{color:'orange',textDecoration:'none'}}>Reset Now</a> </label> */}
-                <label className='text-white mt-3' style={{ letterSpacing: "2px" }}>Don’t have an account?<a href='#' className='dontAccount' style={{ color: 'orange', textDecoration: 'none' }}>Sign Up</a> </label>
+                <div className="div" style={{ marginLeft: '33%' }}>
+                  <button type='button'
+                    className='loginsBtn fw-bold p-2 mt-4'
+                    style={{ backgroundColor: "#4FA095", color: "#27262C", }}
+                    onClick={() => handleShow()} >
+                    Login with Email
+                  </button>
+                </div>
 
-              </Form>   
+                <h6 className='text-white my-2 text-center mt-4 fw-bold'>OR</h6>
+                {account.isConnected ? <h1>
+                  <div className=' fw-bold p-2 mt-2' style={{ marginLeft: '33%' }}  >
+                    {account.address.slice(0, 5)}
+                  </div>
+                </h1> :
+                  <div className=' fw-bold p-2 mt-2' style={{ marginLeft: '33%' }}  >
+                    <Web3Button class='' />
+                  </div>
+
+                }
+                {/* <label className='text-white mt-3' style={{letterSpacing:"2px"}}>Forgot your password? <a href='#' style={{color:'orange',textDecoration:'none'}}>Reset Now</a> </label> */}
+              </Form>
             </div>
           </div>
         </div>
@@ -53,6 +80,8 @@ export default function SignIn() {
           </div>
         </div>
       </div>
+      <Web3Modal config={config} />
+      <Modal show={show} onHide={handleClose}><LoginModal handleClose={() => handleClose()} /></Modal>
     </div>
   )
 }
