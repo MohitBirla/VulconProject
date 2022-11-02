@@ -31,6 +31,16 @@ body {
   color: rgb(240, 58, 58) !important;
 }
 
+
+
+/* ///////////////////////// Dashboard//////////////////////////////// */
+
+
+.main_dashboard{
+  background-image: url(../public/images/wall_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 /* ////////////////////////////////// media Queries /////////////////////////////////////////////// */
 
 @media screen and (max-width: 1200px) {
@@ -38,3 +48,6 @@ body {
     display: none;
   }
 }
+
+
+
