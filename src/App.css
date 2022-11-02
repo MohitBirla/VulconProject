@@ -37,10 +37,26 @@ body {
 
 
 .main_dashboard{
-  background-image: url(../public/images/wall_1.jpg);
+  background-image: url(../public/images/wall_2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.blur_color{
+  background-color: rgba(50,52,59,0.8) !important;
+}
+.side_bar_div{
+  padding: 1% 4% !important;
+}
+
+.side-nav-link:hover h5 {
+  color: red;
+}
+.side-nav-link:hover p{
+  color: red;
+}
+
+
 /* ////////////////////////////////// media Queries /////////////////////////////////////////////// */
 
 @media screen and (max-width: 1200px) {

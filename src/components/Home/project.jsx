@@ -9,6 +9,7 @@ import { useState } from 'react';
 // import Button from 'react-bootstrap/Button';
 import SignIn from '../Login/signIn';
 import { useAuthContext } from '../../providers/AuthProvider';
+import Dashboard from '../Main/Dashboard';
 
 export function shorten(str) {
     if (str.length < 10) return str;
@@ -49,6 +50,7 @@ function Project(props) {
                 </Navbar>
                 <Routes>
                     <Route path="/signIn" element={<SignIn />} />
+                    <Route path="/profile" element={<Dashboard/>} />
                 </Routes>
             </Router>
         </>
