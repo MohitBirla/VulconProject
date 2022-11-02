@@ -42,13 +42,13 @@ export default function SignIn() {
           <div style={{}}>
             <div className=''>
               <Form style={{ padding: "5% 7% 40% 7%" }}>
-                <p className='text-white fw-bold '>XYZ Forged</p>
+                <p className='text-white fw-bold '>World @ Meta</p>
                 <h1 className='text-white fw-bold pt-2 pb-2'>Sign in</h1>
-                <p className='text-white mt-3 ' style={{ letterSpacing: "2px" }}>Sign In to your account by filling following details.</p>
+                <p className='text-white mt-3 ' style={{ letterSpacing: "2px" }}>Log In to your account.</p>
                 <div className="div" style={{ marginLeft: '33%' }}>
                   <button type='button'
-                    className='loginsBtn fw-bold p-2 mt-4'
-                    style={{ backgroundColor: "#4FA095", color: "#27262C", }}
+                    className='loginsBtn p-2 mt-4'
+                    style={{ backgroundColor: "rgb(71 161 255)", color: "rgb(228 231 231)", fontWeight: '700', }}
                     onClick={() => handleShow()} >
                     Login with Email
                   </button>

@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Rubik", sans-serif;
   overflow-x: hidden;
+  font-family: 'Roboto', ;
 }
 
 body {
   background: #181714 !important;
+
 }
 
 .loginMain {
@@ -36,11 +39,12 @@ body {
 /* ///////////////////////// Dashboard//////////////////////////////// */
 
 
-.main_dashboard{
+.main_dashboard {
   background-image: url(../public/images/wall_1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 /* ////////////////////////////////// media Queries /////////////////////////////////////////////// */
 
 @media screen and (max-width: 1200px) {
@@ -48,6 +52,3 @@ body {
     display: none;
   }
 }
-
-
-

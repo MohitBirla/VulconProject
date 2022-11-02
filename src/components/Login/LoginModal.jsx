@@ -24,10 +24,10 @@ export default function LoginModal({ handleClose, ...props }) {
         // eslint-disable-next-line
     }, [address]);
     return (
-        <div>
+        <div className=''>
 
             <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
+                <Modal.Title>Login with Email</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <Form>
