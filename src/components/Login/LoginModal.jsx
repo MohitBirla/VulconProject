@@ -1,31 +1,28 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button'
 import { Form } from 'react-bootstrap';
 import axios from 'axios';
+import { useAuthContext } from '../../providers/AuthProvider';
+import { useNavigate } from "react-router-dom";
 
 export default function LoginModal({ handleClose, ...props }) {
-    const [email, setEmail] = useState('')
-    const instance = axios.create({
-        baseURL: 'https://api.metakeep.xyz/v3/getWallet',
-        timeout: 1000,
-        headers: {
-            accept: 'application/json',
-            'content-type': 'application/json',
-            'x-api-key': 'A8swpEVPuLYtQR3x1aJK5Df8+WoqRPLwh4xxsq9PQG3O'
-        }
-    });
-    axios.defaults.headers.post['Content-Type'] = 'application/json';
-
+    const [email, setEmail] = useState('');
+    const { connectWithEmail, address } = useAuthContext()
+    const navigate = useNavigate();
     const handleEmailChange = (event) => {
         setEmail(event.target.value)
     }
-    const handleSubmit = (event) => {
-        instance.post('', JSON.stringify({ user: { email: email } }))
-            .then(res => {
-
-            })
+    const handleSubmit = () => {
+        connectWithEmail(email)
     }
+
+    useEffect(() => {
+        if (address) {
+            navigate('/profile')
+        }
+        // eslint-disable-next-line
+    }, [address]);
     return (
         <div>
 

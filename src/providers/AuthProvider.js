@@ -5,104 +5,64 @@ import {
   useEffect,
   useState,
 } from "react";
-import Web3 from "web3";
-import Web3Modal from "web3modal";
-import WalletConnectProvider from "@walletconnect/web3-provider";
+import axios from 'axios';
 
 export const AuthContext = createContext({
   address: null,
-  connect: () => null,
   loading: false,
-  disconnect: () => null,
   chainId: null,
-  setAddress: () => null
+  connectWithEmail: () => null,
+  connect: () => null
 });
 
-const providerOptions = {
-  walletconnect: {
-    package: WalletConnectProvider, // required
-    options: {
-      rpc: {
-        1: "https://mainnet.infura.io/v3/",
-      },
-      network: "mainnet",
-    },
-  },
-};
 
-const web3Modal = new Web3Modal({
-  cacheProvider: true, // optional
-  providerOptions, // required
-});
 
 export const AuthProvider = ({ children }) => {
   const [address, setAddress] = useState(null);
   const [loading, setLoading] = useState(false);
   const [chainId, setChainId] = useState(null);
 
-  const subscribeProvider = (provider) => {
-    provider.on("disconnect", (error) => {
-      console.log(error);
-      setChainId(null);
-      setAddress(null);
-    });
-    provider.on("accountsChanged", (accounts) => {
-      setAddress(accounts[0]);
-    });
-    // Subscribe to chainId change
-    provider.on("chainChanged", (chainId) => {
-      setChainId(chainId);
-    });
-  };
-
-  const connect = async () => {
-    if (address) {
-      return;
+  const instance = axios.create({
+    baseURL: 'https://api.metakeep.xyz/v3/getWallet',
+    timeout: 1000,
+    headers: {
+      accept: 'application/json',
+      'content-type': 'application/json',
+      'x-api-key': 'A8swpEVPuLYtQR3x1aJK5Df8+WoqRPLwh4xxsq9PQG3O'
     }
-    setLoading(true);
-
-    try {
-      // let web3 = new Web3(Web3.givenProvider);
-
-      // if (!web3.currentProvider) {
-      //   setSnackbar({
-      //     type: "error",
-      //     message: '"No provider was found"',
-      //   });
-      //   return;
-      // }
-      const provider = await web3Modal.connect();
-      let web3 = new Web3(provider);
-      subscribeProvider(provider);
-
-      const accounts = await web3.eth.getAccounts();
-      const chain = await web3.eth.getChainId();
-      console.log(accounts[0], chain)
-      setAddress(accounts[0]);
-      setChainId(chain);
-    } catch (err) {
-      console.error(err);
-    }
-    setLoading(false);
-  };
+  });
+  axios.defaults.headers.post['Content-Type'] = 'application/json';
 
   const disconnect = () => {
-    web3Modal.clearCachedProvider();
     setAddress(null);
     setChainId(null);
   };
 
+  const connect = (address, chainId = 1) => {
+    setAddress(address);
+    setChainId(chainId);
+  }
+
+  const connectWithEmail = async (email) => {
+    setLoading(true)
+    instance.post('', JSON.stringify({ user: { email: email } }))
+      .then(res => {
+        console.log(res)
+        setAddress(res.data.wallet.ethAddress);
+        setChainId(1)
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }
 
   useEffect(() => {
-    if (web3Modal.cachedProvider) {
-      connect();
-    }
     // eslint-disable-next-line
   }, []);
 
   return (
     <AuthContext.Provider
-      value={{ address, connect, disconnect, chainId, setAddress }}
+      value={{ address, chainId, setAddress, connectWithEmail, loading, connect }}
     >
       {children}
     </AuthContext.Provider>

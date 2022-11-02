@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { BsGoogle } from "react-icons/bs";
 import { BsWalletFill } from "react-icons/bs";
 import Form from 'react-bootstrap/Form';
@@ -6,6 +6,8 @@ import { Web3Modal } from '@web3modal/react'
 import { Web3Button, useAccount } from '@web3modal/react';
 import Modal from 'react-bootstrap/Modal';
 import LoginModal from './LoginModal';
+import { useAuthContext } from '../../providers/AuthProvider';
+import { useNavigate } from "react-router-dom";
 
 const config = {
   projectId: '77a7ee281a308d086ddd3e231804d56d',
@@ -23,7 +25,16 @@ export default function SignIn() {
   const handleShow = () => setShow(true);
 
   const { account } = useAccount()
-  document.getElementById('example')
+  const navigate = useNavigate();
+  const { connectWithEmail, address, connect } = useAuthContext()
+  useEffect(() => {
+    console.log(account)
+    if (account.address) {
+      connect(account.address, 1)
+      navigate('/profile')
+    }
+    // eslint-disable-next-line
+  }, [account]);
   return (
     <div className='main-container' style={{ overFlow: 'hidden' }}>
       <div className='row'>
