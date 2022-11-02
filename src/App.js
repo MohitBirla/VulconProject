@@ -3,11 +3,13 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import Project from './components/Home/project';
+import Dashboard from './components/Main/Dashboard';
 
 function App() {
   return (
     <>
-      <Project />
+      {/* <Project /> */}
+      <Dashboard/>
     </>
   );
 }
