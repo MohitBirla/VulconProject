@@ -63,13 +63,16 @@ body {
 }
 
 /* ///// My Fund & My Assets///////// */
+.card-title{
+  color: #21E6C1;
+}
 .wallet{
   background: -webkit-linear-gradient(rgb(247, 12, 12), rgb(246, 246, 66));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 thead{
-   border-bottom: 2px solid #E14D2A !important;
+   border-bottom: 3px solid #C84771 !important;
  
 }
 thead th{
@@ -83,7 +86,7 @@ tbody tr th,td{
 
 }
 tbody tr:hover{
-  background-color:red !important;
+  background-color:#395144 !important;
 }
 
 .all_events_box {
@@ -108,7 +111,7 @@ tbody tr:hover{
 }
 
 .card-main{
-  background-color: #2E3036 !important;
+  /* background-color: #2E3036 !important; */
   padding: 5% !important;
   border-radius: 5px;
   background: none;

@@ -1,9 +1,9 @@
 import React from 'react'
 import Avatar from "@mui/material/Avatar";
 export default function MyAssets() {
-  return (
-    <>
-        
+    return (
+        <>
+
             <div >
                 <div className='text-white'>
                     <h1 style={{ fontSize: '60px', fontWeight: 'bold' }} >My Assets</h1>
@@ -114,11 +114,11 @@ export default function MyAssets() {
                             </button>
                         </li>
 
-                       
+
                     </ul>
                     <div className="tab-content" id="pills-tabContent">
                         <div
-                            style={{ height: "10rem" }}
+                            
                             className="tab-pane fade show active"
                             id="pills-home"
                             role="tabpanel"
@@ -128,13 +128,13 @@ export default function MyAssets() {
                                 <div>
                                     <div className='row mt-3 '>
                                         <div class=" col-lg-3 col-md-6 col-12" >
-                                            <div class="card ">
+                                            <div class="card blur_color border border-light ">
                                                 <div class="card-body">
                                                     <div className='row'>
                                                         <div className='col-4'> <Avatar style={{ fontSize: '4rem' }} /> </div>
                                                         <div className='col-8'>
-                                                            <h5 class="card-title">VulcanMarket NFTs</h5>
-                                                            <span class="card-title fw-bolder fs-2">0</span>
+                                                            <h5 style={{ fontSize: '20px', fontWeight: 'bold' }} class="card-title">VulcanMarket NFTs</h5>
+                                                            <span class=" fw-bolder fs-2">0</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -142,13 +142,13 @@ export default function MyAssets() {
                                             </div>
                                         </div>
                                         <div class=" col-lg-3 col-md-6 col-12  " >
-                                            <div class="card ">
+                                            <div class="card blur_color border border-light">
                                                 <div class="card-body" style={{ height: '140px' }}>
                                                     <div className='row'>
                                                         <div className='col-4'> <Avatar style={{ fontSize: '4rem' }} /> </div>
                                                         <div className='col-8'>
-                                                            <h5 class="card-title">Agors NFTs</h5>
-                                                            <span class="card-title fw-bolder fs-2">0</span>
+                                                            <h5 style={{ fontSize: '20px', fontWeight: 'bold',color:'#21E6C1' }} class="card-title">Agors NFTs</h5>
+                                                            <span class=" fw-bolder fs-2">0</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -156,13 +156,13 @@ export default function MyAssets() {
                                             </div>
                                         </div>
                                         <div class=" col-lg-3 col-md-6 col-12" >
-                                            <div class="card ">
+                                            <div class="card blur_color border border-light ">
                                                 <div class="card-body" style={{ height: '140px' }}>
                                                     <div className='row'>
                                                         <div className='col-4'> <Avatar style={{ fontSize: '4rem' }} /> </div>
                                                         <div className='col-8'>
-                                                            <h5 class="card-title">Total NFTs</h5>
-                                                            <span class="card-title fw-bolder fs-2">0</span>
+                                                            <h5 style={{ fontSize: '20px', fontWeight: 'bold' }} class="card-title">Total NFTs</h5>
+                                                            <span class=" fw-bolder fs-2">0</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -170,42 +170,97 @@ export default function MyAssets() {
                                             </div>
                                         </div>
                                         <div class=" col-lg-3 col-md-6 col-12" >
-                                            <div class="card ">
+                                            <div class="card blur_color border border-light ">
                                                 <div class="card-body">
                                                     <div className='row'>
                                                         <div className='col-4'> <Avatar style={{ fontSize: '4rem' }} /> </div>
                                                         <div className='col-8'>
-                                                            <h5 class="card-title">Total NFTs Sold</h5>
-                                                            <span class="card-title fw-bolder fs-2">0</span>
+                                                            <h5 style={{ fontSize: '20px', fontWeight: 'bold' }} class="card-title">Total NFTs Sold</h5>
+                                                            <span class=" fw-bolder fs-2">0</span>
                                                         </div>
                                                     </div>
                                                 </div>
 
                                             </div>
                                         </div>
+                                        {/* ============================= table ///////////////////////// */}
+                                         <div className='table_head'>
+                    <div className='row mt-5'>
+                      <div className='col-4'>
+                        <h5 style={{ fontSize: '25px', fontWeight: 'bold' }} class="card-title">My<span className='wallet'>NFTs</span> </h5>
+
+                      </div>
+                      <div className='col-8'>
+                        <input type="text" class="form-control shadow-none h-pxl-48 rounded-1 w-75" name="Payment.TwoFactorCode" placeholder="Search" />
+
+                      </div>
+                    </div>
+                    <div className='table-container  blur_color'>
+                      <table class="table  table-sm mt-4  blur_color">
+                        <thead>
+                          <tr>
+                            <th scope="col text-p">Id</th>
+                            <th scope="col text-p">Type</th>
+                            <th scope="col text-p">From Address</th>
+                            <th scope="col text-p">To Address</th>
+                            <th scope="col text-p">Transaction Id</th>
+
+                          </tr>
+
+                        </thead>
+
+                        <tbody className=''>
+                          <tr>
+                            <th scope="row">212275</th>
+                            <td style={{ width: '6%' }}>Pvr Main Wallet to Market Wallet Pvr</td>
+                            <td style={{ width: '15%' }}></td>
+                            <td>0x994986464564...</td>
+                            <td>0x994986464564545894856148498479454615646464546464468429</td>
+
+                          </tr>
+                          <tr>
+                            <th scope="row">212276</th>
+                            <td style={{ width: '6%' }}>Pvr Main Wallet to Market Wallet Pvr</td>
+
+                            <td ></td>
+                            <td>0x994986464564...</td>
+                            <td>0x994986464564545894856148498479454615646464546464468429</td>
+
+                          </tr>
+                          <tr>
+                            <th scope="row">212277</th>
+                            <td style={{ width: '6%' }}>Pvr Main Wallet to Market Wallet Pvr</td>
+
+                            <td></td>
+                            <td>0x994986464564...</td>
+                            <td>0x994986464564545894856148498479454615646464546464468429</td>
 
 
+                          </tr>
+                          <tr>
+                            <th scope="row" style={{ width: '10%' }}>212278</th>
+                            <td style={{ width: '6%' }}>Pvr Main Wallet to Market Wallet Pvr</td>
+                            <td></td>
+                            <td>0x994986464564...</td>
+                            <td>0x994986464564545894856148498479454615646464546464468429489</td>
 
 
-                                        {/* <div class="card">
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
 
-                                                        <div class="card-body">
-                                                            <h5 class="card-title">Card title</h5>
-                                                            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                                                        </div>
-                                                        <div class="card-footer">
-                                                            <small class="text-muted">Last updated 3 mins ago</small>
-                                                        </div>
-                                                    </div> */}
 
                                     </div>
+
 
                                 </div>
 
                             </div>
                         </div>
                         <div
-                            style={{ height: "50rem" }}
+                            
                             className="tab-pane fade"
                             id="pills-profile"
                             role="tabpanel"
@@ -226,7 +281,7 @@ export default function MyAssets() {
                             </div>
                         </div>
                         <div
-                            style={{ height: "50rem" }}
+                           
                             className="tab-pane fade"
                             id="pills-land"
                             role="tabpanel"
@@ -248,7 +303,7 @@ export default function MyAssets() {
                         </div>
                         {/* == */}
                         <div
-                            style={{ height: "50rem" }}
+                           
                             className="tab-pane fade"
                             id="pills-VULCANITES"
                             role="tabpanel"
@@ -272,7 +327,7 @@ export default function MyAssets() {
 
 
                         <div
-                            style={{ height: "50rem" }}
+                           
                             className="tab-pane fade"
                             id="pills-SOW"
                             role="tabpanel"
@@ -296,7 +351,7 @@ export default function MyAssets() {
 
 
                         <div
-                            style={{ height: "50rem" }}
+                         
                             className="tab-pane fade"
                             id="pills-GOD"
                             role="tabpanel"
@@ -320,7 +375,7 @@ export default function MyAssets() {
 
 
                         <div
-                            style={{ height: "50rem" }}
+                           
                             className="tab-pane fade"
                             id="pills-BERSERK"
                             role="tabpanel"
@@ -344,7 +399,7 @@ export default function MyAssets() {
 
 
                         <div
-                            style={{ height: "50rem" }}
+                           
                             className="tab-pane fade"
                             id="pills-VAULT"
                             role="tabpanel"
@@ -369,27 +424,12 @@ export default function MyAssets() {
                     </div>
                 </div>
 
-                {/* == */}
-                <div className='row mt-5 text-white'>
-
-                    <h1 >My NFTs</h1>
-                    <div class='container '>
-                        <input type="text" id="searchInput" className='rounded-3' placeholder="Search.." />
-                        <div id='submitsearch'>
-                            <span >Search</span>
-
-                        </div>
-                    </div>
-
-                </div>
-
-
-                {/* == */}
+               
 
 
             </div>
 
 
-    </>
-)
+        </>
+    )
 }
