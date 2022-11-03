@@ -9,11 +9,8 @@ import { useState } from 'react';
 // import Button from 'react-bootstrap/Button';
 import SignIn from '../Login/signIn';
 import { useAuthContext } from '../../providers/AuthProvider';
-<<<<<<< mohit_dashboard
 import Dashboard from '../Main/Dashboard';
-=======
 import logo from './../../assets/worldmetalogo.png'
->>>>>>> main
 
 export function shorten(str) {
     if (str.length < 10) return str;
