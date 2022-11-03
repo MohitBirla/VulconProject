@@ -24,7 +24,6 @@ export const AuthProvider = ({ children }) => {
 
   const instance = axios.create({
     baseURL: 'https://api.metakeep.xyz/v3/getWallet',
-    timeout: 1000,
     headers: {
       accept: 'application/json',
       'content-type': 'application/json',
