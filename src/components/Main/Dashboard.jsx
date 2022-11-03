@@ -87,7 +87,7 @@ const [showdata , setShowdata] = React.useState("MYFUNDS")
       </div>
     </div>
         </div>
-        <div className='p-5 col-lg-9 col-md-9 col-12 text-white'>
+        <div className='px-5 pt-2 col-lg-9 col-md-9 col-12 text-white'>
         
            {showdata === "MYFUNDS"?<MyFunds/>:""}
            {showdata === "MYASSETS"?<MyAssets/>:""}
