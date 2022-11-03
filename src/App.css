@@ -9,6 +9,7 @@
 
 body {
   background: #181714 !important;
+  overflow-x: hidden !important;
 
 }
 
@@ -67,6 +68,23 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+thead{
+   border-bottom: 2px solid #E14D2A !important;
+ 
+}
+thead th{
+  padding: 1% !important;
+  color: #9ED5C5 !important;
+  font-weight: bold;
+}
+tbody tr th,td{
+  color: #989FAE !important;
+  padding: 1% !important;
+
+}
+tbody tr:hover{
+  background-color:red !important;
+}
 
 .all_events_box {
   border-bottom: 2px dashed #f26000;
@@ -91,7 +109,6 @@ body {
 
 .card-main{
   background-color: #2E3036 !important;
-  /* border: px solid red ; */
   padding: 5% !important;
   border-radius: 5px;
   background: none;
@@ -195,7 +212,14 @@ input[type=number] {
 /* ////////////////////////////////// media Queries /////////////////////////////////////////////// */
 
 @media screen and (max-width: 1200px) {
+  
   .signInCarousel {
     display: none;
+  }
+  .table-container{
+    overflow: scroll;
+  }
+  .top_main{
+    padding: 0% !important;
   }
 }
