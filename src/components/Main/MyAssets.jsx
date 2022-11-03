@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Avatar from "@mui/material/Avatar";
 export default function MyAssets() {
   return (
     <>
@@ -147,7 +147,7 @@ export default function MyAssets() {
                                             <div class="card ">
                                                 <div class="card-body">
                                                     <div className='row'>
-                                                        <div className='col-4'> <AccountCircleIcon style={{ fontSize: '4rem' }} /> </div>
+                                                        <div className='col-4'> <Avatar style={{ fontSize: '4rem' }} /> </div>
                                                         <div className='col-8'>
                                                             <h5 class="card-title">VulcanMarket NFTs</h5>
                                                             <span class="card-title fw-bolder fs-2">0</span>
@@ -161,7 +161,7 @@ export default function MyAssets() {
                                             <div class="card ">
                                                 <div class="card-body" style={{ height: '140px' }}>
                                                     <div className='row'>
-                                                        <div className='col-4'> <AccountCircleIcon style={{ fontSize: '4rem' }} /> </div>
+                                                        <div className='col-4'> <Avatar style={{ fontSize: '4rem' }} /> </div>
                                                         <div className='col-8'>
                                                             <h5 class="card-title">Agors NFTs</h5>
                                                             <span class="card-title fw-bolder fs-2">0</span>
@@ -175,7 +175,7 @@ export default function MyAssets() {
                                             <div class="card ">
                                                 <div class="card-body" style={{ height: '140px' }}>
                                                     <div className='row'>
-                                                        <div className='col-4'> <AccountCircleIcon style={{ fontSize: '4rem' }} /> </div>
+                                                        <div className='col-4'> <Avatar style={{ fontSize: '4rem' }} /> </div>
                                                         <div className='col-8'>
                                                             <h5 class="card-title">Total NFTs</h5>
                                                             <span class="card-title fw-bolder fs-2">0</span>
@@ -189,7 +189,7 @@ export default function MyAssets() {
                                             <div class="card ">
                                                 <div class="card-body">
                                                     <div className='row'>
-                                                        <div className='col-4'> <AccountCircleIcon style={{ fontSize: '4rem' }} /> </div>
+                                                        <div className='col-4'> <Avatar style={{ fontSize: '4rem' }} /> </div>
                                                         <div className='col-8'>
                                                             <h5 class="card-title">Total NFTs Sold</h5>
                                                             <span class="card-title fw-bolder fs-2">0</span>
