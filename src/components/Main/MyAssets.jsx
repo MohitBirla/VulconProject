@@ -114,20 +114,7 @@ export default function MyAssets() {
                             </button>
                         </li>
 
-                        <li className="nav-item" role="presentation">
-                            <button
-                                className="nav-link"
-                                id="pills-VAULT-tab"
-                                data-bs-toggle="pill"
-                                data-bs-target="#pills-VAULT"
-                                type="button"
-                                role="tab"
-                                aria-controls="pills-VAULT"
-                                aria-selected="false"
-                            >
-                                VULCANS'VAULT
-                            </button>
-                        </li>
+                       
                     </ul>
                     <div className="tab-content" id="pills-tabContent">
                         <div
