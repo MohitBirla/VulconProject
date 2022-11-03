@@ -4,7 +4,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
   font-family: 'Roboto', ;
 }
 
@@ -41,7 +40,7 @@ body {
 
 
 .main_dashboard {
-  background-image: url(../public/images/wall_1.jpg);
+  background-image: url(../public/images/wall_2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -53,15 +52,20 @@ body {
 }
 
 .side-nav-link:hover h5 {
-  color: red;
+  color: #3AD3EC;
+  cursor: pointer;
 }
 .side-nav-link:hover p{
-  color: red;
-}
-/* ///// My Fund & My Assets///////// */
+  color: #3AD3EC;
+  cursor: pointer;
 
-.tabs_events {
-  border-bottom: 1px solid #E1E1E1;
+}
+
+/* ///// My Fund & My Assets///////// */
+.wallet{
+  background: -webkit-linear-gradient(rgb(247, 12, 12), rgb(246, 246, 66));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .all_events_box {
@@ -84,9 +88,13 @@ body {
   color: #6C757D;
   font-family: 'redhat-SB' ;
 }
+
 .card-main{
-  background:#141314 !important;
+  background-color: #2E3036 !important;
+  /* border: px solid red ; */
   padding: 5% !important;
+  border-radius: 5px;
+  background: none;
 }
 .OrangeText {
   color: #FF7B00;
