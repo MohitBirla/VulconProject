@@ -3,11 +3,8 @@ import Avatar from "@mui/material/Avatar";
 export default function MyAssets() {
   return (
     <>
-        <div className='row p-5'>
-            <div className='col-3'>
-                <h1 className='text-white'>Shivam</h1>
-            </div>
-            <div className='col-9'>
+        
+            <div >
                 <div className='text-white'>
                     <h1 style={{ fontSize: '60px', fontWeight: 'bold' }} >My Assets</h1>
                 </div>
@@ -406,7 +403,6 @@ export default function MyAssets() {
             </div>
 
 
-        </div>
     </>
 )
 }
