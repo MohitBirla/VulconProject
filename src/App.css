@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Rubik", sans-serif;
   overflow-x: hidden;
+  font-family: 'Roboto', ;
 }
 
 body {
   background: #181714 !important;
+
 }
 
 .loginMain {
@@ -36,24 +39,11 @@ body {
 /* ///////////////////////// Dashboard//////////////////////////////// */
 
 
-.main_dashboard{
-  background-image: url(../public/images/wall_2.jpg);
+
+.main_dashboard {
+  background-image: url(../public/images/wall_1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.blur_color{
-  background-color: rgba(50,52,59,0.8) !important;
-}
-.side_bar_div{
-  padding: 1% 4% !important;
-}
-
-.side-nav-link:hover h5 {
-  color: red;
-}
-.side-nav-link:hover p{
-  color: red;
 }
 
 
@@ -64,6 +54,3 @@ body {
     display: none;
   }
 }
-
-
-
