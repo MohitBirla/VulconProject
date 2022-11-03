@@ -39,11 +39,13 @@ body {
 /* ///////////////////////// Dashboard//////////////////////////////// */
 
 
+
 .main_dashboard {
   background-image: url(../public/images/wall_1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 
 /* ////////////////////////////////// media Queries /////////////////////////////////////////////// */
 
