@@ -12,7 +12,8 @@ export const AuthContext = createContext({
   loading: false,
   chainId: null,
   connectWithEmail: () => null,
-  connect: () => null
+  connect: () => null,
+  disconnect: () => null
 });
 
 
@@ -61,7 +62,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ address, chainId, setAddress, connectWithEmail, loading, connect }}
+      value={{ address, chainId, setAddress, connectWithEmail, loading, connect, disconnect }}
     >
       {children}
     </AuthContext.Provider>
