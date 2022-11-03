@@ -6,6 +6,15 @@ import {
   useState,
 } from "react";
 import axios from 'axios';
+import { MetaKeep } from 'metakeep'
+
+const sdk = new MetaKeep({
+  environment: "Development",
+  /* Web3 node url */
+  rpcNodeUrl: '',
+  /* App id to configure UI */
+  appId: "b9eb8e3e-7ea2-4b8d-84be-0fcd0dc4d54e",
+});
 
 export const AuthContext = createContext({
   address: null,
@@ -13,7 +22,8 @@ export const AuthContext = createContext({
   chainId: null,
   connectWithEmail: () => null,
   connect: () => null,
-  disconnect: () => null
+  disconnect: () => null,
+  signMessage: () => null
 });
 
 
@@ -56,13 +66,28 @@ export const AuthProvider = ({ children }) => {
       })
   }
 
+  const signMessage = async (email) => {
+    let resp = await sdk.signMessage(
+      // message
+      "Hello World",
+      // signing reason
+      "reason",
+    );
+    if (resp) {
+      console.log('signed')
+      connectWithEmail(email)
+    } else {
+      console.log('signed')
+    }
+  }
+
   useEffect(() => {
     // eslint-disable-next-line
   }, []);
 
   return (
     <AuthContext.Provider
-      value={{ address, chainId, setAddress, connectWithEmail, loading, connect, disconnect }}
+      value={{ address, chainId, setAddress, connectWithEmail, loading, connect, disconnect, signMessage }}
     >
       {children}
     </AuthContext.Provider>

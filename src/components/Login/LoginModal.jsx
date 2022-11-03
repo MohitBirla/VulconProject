@@ -8,13 +8,14 @@ import { useNavigate } from "react-router-dom";
 
 export default function LoginModal({ handleClose, ...props }) {
     const [email, setEmail] = useState('');
-    const { connectWithEmail, address } = useAuthContext()
+    const { connectWithEmail, address, signMessage } = useAuthContext()
     const navigate = useNavigate();
     const handleEmailChange = (event) => {
         setEmail(event.target.value)
     }
     const handleSubmit = () => {
-        connectWithEmail(email)
+        // connectWithEmail(email);
+        signMessage(email)
     }
 
     useEffect(() => {

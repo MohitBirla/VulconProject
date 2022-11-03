@@ -45,7 +45,7 @@ function Project(props) {
                             </Nav>
                             <Form className="d-flex">
                                 <div className="link">{
-                                    address ? <span className='text-white' onClick={() => disconnect()} >{shorten(address)}</span> : <Link to='/signIn'>
+                                    address ? <span className='text-white' onClick={() => disconnect()} >{shorten(address)}</span> : <Link to='/login'>
                                         <button type='button' className='text-white fw-bold ps-4 pe-4 rounded-2' style={{ backgroundColor: "rgb(70 155 244)", color: "#27262C", width: '100%', height: '100%', fontSize: '1.20rem' }}>
                                             Login
                                         </button>
