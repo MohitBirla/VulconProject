@@ -58,7 +58,131 @@ body {
 .side-nav-link:hover p{
   color: red;
 }
+/* ///// My Fund & My Assets///////// */
 
+.tabs_events {
+  border-bottom: 1px solid #E1E1E1;
+}
+
+.all_events_box {
+  border-bottom: 2px dashed #f26000;
+}
+
+.tabs_events.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  background-color: transparent;
+  font-size: 16px;
+  font-family: 'redhat-B';
+  color: #F26000;
+  border-radius: 0;
+  border-bottom: 3px solid;
+}
+
+.tabs_events.nav-pills .nav-link {
+  padding: 14px 35px;
+  transition: ease 0.5s;
+  color: #6C757D;
+  font-family: 'redhat-SB' ;
+}
+.card-main{
+  background:#141314 !important;
+  padding: 5% !important;
+}
+.OrangeText {
+  color: #FF7B00;
+}
+.BtnBorder {
+  position: relative;
+  font-family: "Trueno SemiBold";
+  font-size: 20px !important;
+  line-height: 1.5 !important;
+  color: #fff;
+  z-index: 1;
+  padding: 12px 16px !important;
+}
+.bg-transparent {
+  --bs-bg-opacity: 1;
+  background-color: transparent !important;
+}
+.BtnBorder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 8px;
+  padding: 2px;
+  background: -webkit-linear-gradient(345deg, #F55D0D 0%, #7C0953 100%) no-repeat padding-box;
+  background: -o-linear-gradient(345deg, #F55D0D 0%, #7C0953 100%) no-repeat padding-box;
+  background: linear-gradient(105deg, #F55D0D 0%, #7C0953 100%) no-repeat padding-box;
+  -webkit-mask: -webkit-linear-gradient(345deg, #F55D0D 0%, #7C0953 100%) content-box, -webkit-linear-gradient(345deg, #F55D0D 0%, #7C0953 100%);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+}
+.border-0 {
+  border: 0 !important;
+}
+
+.form-control.h-pxl-48, .form-select.h-pxl-48 {
+  min-height: 48px;
+}
+.form-control, .form-select {
+  background-color: #202022;
+  border-color: #6A6F7766;
+  min-height: 40px;
+  color: #707070;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+.g-1, .gx-1 {
+  --bs-gutter-x: 0.5rem !important;
+}
+.form-control.h-pxl-48, .form-select.h-pxl-48 {
+  min-height: 48px;
+}
+.form-control, .form-select {
+  background-color: #202022 !important ;
+  border-color: #6A6F7766 !important;
+  min-height: 40px;
+  color: #707070 !important;
+}
+.rounded-1 {
+  border-radius: 0.5rem !important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+/* ///// My Fund & My Assets End///////// */
 
 /* ////////////////////////////////// media Queries /////////////////////////////////////////////// */
 
