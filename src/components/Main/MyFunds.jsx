@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function MyFunds() {
   return (
-
-    <div className='main'>
+  <div className='top_main'>
+ <div className='main p-0'>
       <div className='text-white'>
         <h1 style={{ fontSize: '60px', fontWeight: 'bold' }} >My Funds</h1>
       </div>
@@ -59,7 +59,7 @@ export default function MyFunds() {
         </ul>
         <div className="tab-content" id="pills-tabContent">
           <div
-            
+
             className="tab-pane fade show active"
             id="pills-home"
             role="tabpanel"
@@ -75,7 +75,7 @@ export default function MyFunds() {
                         <h5 style={{ fontSize: '25px', fontWeight: 'bold' }} class="card-title">PYR Main <span className='wallet'>Wallet</span> </h5>
                         <div className='bg-white mt-4' style={{ width: '100%', height: '1px' }} ></div>
                         <div className='d-flex align-items-center pt-4'>
-                          <p style={{ color: '#989FAE' }} class="card-text mt-2">Total Main Wallet Balance</p>
+                          <p style={{ color: '#989FAE' }} class=" text-p card-text mt-2">Total Main Wallet Balance</p>
                           <h3 style={{ fontSize: '30px', fontWeight: 'bold' }} className='ms-3 '><span>0 </span>PVR</h3>
                         </div>
                         <div className='bg-white mt-4' style={{ width: '100%', height: '1px' }} ></div>
@@ -141,7 +141,7 @@ export default function MyFunds() {
             </div>
           </div>
           <div
-            style={{ height: "50rem" }}
+            
             className="tab-pane fade"
             id="pills-profile"
             role="tabpanel"
@@ -159,7 +159,7 @@ export default function MyFunds() {
             </div>
           </div>
           <div
-            style={{ height: "50rem" }}
+           
             className="tab-pane fade"
             id="pills-wp"
             role="tabpanel"
@@ -179,9 +179,76 @@ export default function MyFunds() {
           </div>
         </div>
       </div>
+      <div className='table_head'>
+        <div className='row mt-5'>
+          <div className='col-4'>
+            <h5 style={{ fontSize: '25px', fontWeight: 'bold' }} class="card-title">Swapping <span className='wallet'>History</span> </h5>
 
+          </div>
+          <div className='col-8'>
+            <input type="text" class="form-control shadow-none h-pxl-48 rounded-1 w-75" name="Payment.TwoFactorCode" placeholder="Search" />
+
+          </div>
+        </div>
+        <div className='table-container'>
+          <table class="table table-dark table-sm mt-4">
+            <thead>
+              <tr>
+                <th scope="col text-p">Id</th>
+                <th scope="col text-p">Type</th>
+                <th scope="col text-p">From Address</th>
+                <th scope="col text-p">To Address</th>
+                <th scope="col text-p">Transaction Id</th>
+
+              </tr>
+              
+            </thead>
+            
+            <tbody className=''>
+              <tr>
+                <th scope="row">212275</th>
+                <td style={{width:'6%'}}>Pvr Main Wallet to Market Wallet Pvr</td>
+                <td style={{width:'15%'}}></td>
+                <td>0x994986464564...</td>
+                <td>0x994986464564545894856148498479454615646464546464468429</td>
+
+              </tr>
+              <tr>
+                <th scope="row">212276</th>
+                <td style={{width:'6%'}}>Pvr Main Wallet to Market Wallet Pvr</td>
+
+                <td ></td>
+                <td>0x994986464564...</td>
+                <td>0x994986464564545894856148498479454615646464546464468429</td>
+
+              </tr>
+              <tr>
+                <th scope="row">212277</th>
+                <td style={{width:'6%'}}>Pvr Main Wallet to Market Wallet Pvr</td>
+
+                <td></td>
+                <td>0x994986464564...</td>
+                <td>0x994986464564545894856148498479454615646464546464468429</td>
+
+
+              </tr>
+              <tr>
+                <th scope="row"style={{width:'10%'}}>212278</th>
+                <td style={{width:'6%'}}>Pvr Main Wallet to Market Wallet Pvr</td>
+                <td></td>
+                <td>0x994986464564...</td>
+                <td>0x994986464564545894856148498479454615646464546464468429489</td>
+
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
 
     </div>
+  </div>
+   
   )
 }
