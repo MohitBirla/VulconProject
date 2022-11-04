@@ -72,11 +72,11 @@ export default function MyFunds() {
                       <div class="card  blur_color">
 
                         <div class="card-body blur_color card-main text-white">
-                          <h5 style={{ fontSize: '25px', fontWeight: 'bold' }} class="card-title">PYR Main <span className='wallet'>Wallet</span> </h5>
+                          <h5 style={{ fontSize: '25px', fontWeight: 'bold' }} class="card-title">MATIC Main <span className='wallet'>Wallet</span> </h5>
                           <div className='bg-white mt-4' style={{ width: '100%', height: '1px' }} ></div>
                           <div className='d-flex align-items-center pt-4'>
                             <p style={{ color: '#989FAE' }} class=" text-p card-text mt-2">Total Main Wallet Balance</p>
-                            <h3 style={{ fontSize: '30px', fontWeight: 'bold' }} className='ms-3 '><span>0 </span>PVR</h3>
+                            <h3 style={{ fontSize: '30px', fontWeight: 'bold' }} className='ms-3 '><span>0 </span>MATIC</h3>
                           </div>
                           <div className='bg-white mt-4' style={{ width: '100%', height: '1px' }} ></div>
 
@@ -100,15 +100,15 @@ export default function MyFunds() {
                         </div>
                       </div>
                     </div>
-                    <div className='col-12 col-md-12 col-lg-6'>
+                    {/* <div className='col-12 col-md-12 col-lg-6'>
                       <div class="card  blur_color">
 
                         <div class="card-body card-main blur_color text-white">
-                          <h5 style={{ fontSize: '25px', fontWeight: 'bold' }} class="card-title">PYR Market  <span className='wallet'>Wallet</span> </h5>
+                          <h5 style={{ fontSize: '25px', fontWeight: 'bold' }} class="card-title">MATIC Market  <span className='wallet'>Wallet</span> </h5>
                           <div className='bg-white mt-4' style={{ width: '100%', height: '1px' }} ></div>
                           <div className='d-flex align-items-center pt-4'>
                             <p style={{ color: '#989FAE' }} class="card-text mt-2">Total Main Wallet Balance</p>
-                            <h3 style={{ fontSize: '30px', fontWeight: 'bold' }} className='ms-3 '><span>0 </span>PVR</h3>
+                            <h3 style={{ fontSize: '30px', fontWeight: 'bold' }} className='ms-3 '><span>0 </span>MATIC</h3>
                           </div>
                           <div className='bg-white mt-4' style={{ width: '100%', height: '1px' }} ></div>
 
@@ -134,7 +134,7 @@ export default function MyFunds() {
 
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                   <div className='table_head'>
                     <div className='row mt-5'>

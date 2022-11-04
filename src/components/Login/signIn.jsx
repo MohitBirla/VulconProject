@@ -26,15 +26,15 @@ export default function SignIn() {
 
   const { account } = useAccount()
   const navigate = useNavigate();
-  const { connectWithEmail, address, connect } = useAuthContext()
+  const { connectWithEmail, address, connect, signMessage } = useAuthContext()
   useEffect(() => {
     console.log(account)
-    if (account.address) {
-      connect(account.address, 1)
+    if (account.address || address) {
+      connect(account.address ? account.address : address, 1)
       navigate('/profile')
     }
     // eslint-disable-next-line
-  }, [account]);
+  }, [account, address]);
   return (
     <div className='main-container' style={{ overFlow: 'hidden' }}>
       <div className='row'>
@@ -49,7 +49,7 @@ export default function SignIn() {
                   <button type='button'
                     className='loginsBtn p-2 mt-4'
                     style={{ backgroundColor: "rgb(71 161 255)", color: "rgb(228 231 231)", fontWeight: '700', }}
-                    onClick={() => handleShow()} >
+                    onClick={() => signMessage()} >
                     Login with Email
                   </button>
                 </div>

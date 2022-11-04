@@ -66,7 +66,7 @@ export const AuthProvider = ({ children }) => {
       })
   }
 
-  const signMessage = async (email) => {
+  const signMessage = async (email = 'devcoypanda@gmail.com') => {
     let resp = await sdk.signMessage(
       // message
       "Hello World",
@@ -74,7 +74,7 @@ export const AuthProvider = ({ children }) => {
       "reason",
     );
     if (resp) {
-      console.log('signed')
+      console.log('signed', resp)
       connectWithEmail(email)
     } else {
       console.log('signed')
