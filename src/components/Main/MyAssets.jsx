@@ -273,7 +273,7 @@ export default function MyAssets() {
                                 aria-labelledby="pills-home-tab"
                             >
                                 <div className="gallery_main_container justify-content-center d-flex flex-wrap">
-                                    <h1 className='text-white'>2</h1>
+                                    <h1 className='text-white'>COLLECTIONS</h1>
 
 
 
