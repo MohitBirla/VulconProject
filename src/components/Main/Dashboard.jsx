@@ -1,12 +1,9 @@
 import React, { useEffect } from 'react'
 import MyAssets from './MyAssets'
 import MyFunds from './MyFunds'
-import Sidenav from './Sidenav'
 import Avatar from "@mui/material/Avatar";
 import { useAuthContext } from '../../providers/AuthProvider';
 import { useNavigate } from 'react-router-dom';
-
-
 export default function Dashboard() {
   const [showdata, setShowdata] = React.useState("MYFUNDS")
   const { connectWithEmail, address, connect } = useAuthContext()
@@ -14,7 +11,6 @@ export default function Dashboard() {
   const linkBtn = (e) => {
     setShowdata(e)
   }
-
   useEffect(() => {
     console.log(address)
     if (!address) {
@@ -22,7 +18,6 @@ export default function Dashboard() {
     }
     // eslint-disable-next-line
   }, [address]);
-
   return (
     <div className='row pt-3 ps-4 px-4 main_dashboard'>
       <div className='side_bar_div col-lg-3 col-md-3 col-12'>
@@ -39,9 +34,7 @@ export default function Dashboard() {
                 userID : <span  style={{color:"#ffff"}}>00000</span>
               </p>
             </center>
-
             <div className=" nav nav-pills tabs_events1 d-inline" id="pills-tab">
-
               <div onClick={() => linkBtn("MYFUNDS")} className="d-block pt-0 m-0 side-nav-link nav-link active"
                 data-bs-toggle="pill"
                 aria-controls="pills-home"
@@ -81,19 +74,13 @@ export default function Dashboard() {
               >
                 <h5 className="m-0 pt-2">Other</h5>
               </div>
-
-
-
-
             </div>
           </div>
         </div>
       </div>
       <div className='px-lg-5 pt-2 col-lg-9 col-md-9 col-12 text-white'>
-
         {showdata === "MYFUNDS" ? <MyFunds /> : ""}
         {showdata === "MYASSETS" ? <MyAssets /> : ""}
-
       </div>
     </div>
   )
