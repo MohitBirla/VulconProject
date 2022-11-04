@@ -7,7 +7,7 @@
   font-family: 'Roboto', ;
 }
 
-body {
+body{
   background: #181714 !important;
   overflow-x: hidden !important;
 
@@ -48,23 +48,33 @@ body {
 .blur_color{
   background-color: rgba(50,52,59,0.8) !important;
 }
+.side_main{
+  padding-bottom: 5%!important;
+}
 .side_bar_div{
   padding: 1% 4% !important;
 }
 
-.side-nav-link:hover h5 {
-  color: #3AD3EC;
+ .side-nav-link:hover{
+  color:#7D0633 !important;
   cursor: pointer;
 }
-.side-nav-link:hover p{
-  color: #3AD3EC;
+
+.side-nav-link{
+  color:white !important ;
   cursor: pointer;
 
 }
+
+
 
 /* ///// My Fund & My Assets///////// */
 .card-title{
   color: #21E6C1;
+}
+.transferBtn:hover{
+  background-color:rgb(7, 6, 6) !important;
+  border-radius: 14px 13px 12px 13px !important;
 }
 .wallet{
   background: -webkit-linear-gradient(rgb(247, 12, 12), rgb(246, 246, 66));
@@ -95,7 +105,7 @@ tbody tr:hover{
 
 .tabs_events.nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-  background-color: transparent;
+  background-color:transparent;
   font-size: 16px;
   font-family: 'redhat-B';
   color: #F26000;
@@ -106,9 +116,24 @@ tbody tr:hover{
 .tabs_events.nav-pills .nav-link {
   padding: 14px 35px;
   transition: ease 0.5s;
-  color: #6C757D;
+  color: #639CD9;
   font-family: 'redhat-SB' ;
+  font-weight: bold;
 }
+.tabs_events.nav-pills .nav-link:hover{
+  color: #F26000 !important;
+  
+}
+/* ///////////////////////// */
+.tabs_events1.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+  background-color:#F2A07B;
+  border-radius: 15px;
+  /* border-bottom: 2px solid black; */
+  color: #7D0633 !important;
+  
+}
+
 
 .card-main{
   /* background-color: #2E3036 !important; */
@@ -224,5 +249,8 @@ input[type=number] {
   }
   .top_main{
     padding: 0% !important;
+  }
+  .side_bar_div{
+    padding: 0.5% !important;
   }
 }

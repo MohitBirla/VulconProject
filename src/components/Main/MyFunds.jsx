@@ -91,7 +91,7 @@ export default function MyFunds() {
                                 <h6 id="MainMax" type="button" class="p-0 OrangeText shadow-none  bg-transparent border-0 position-absolute end-0 top-0  mt-3 F-size-20 bottom-0 me-3  "> Max </h6>
                               </div>
                               <div class="col-auto">
-                                <button type="button" id="ConvertMainToMarket" class="BtnBorder py-2 px-2 bg-transparent border-0" >Transfer</button>
+                                <button type="button" id="ConvertMainToMarket" class="BtnBorder py-2 px-2 bg-transparent border-0 transferBtn" >Transfer</button>
                               </div>
 
                             </form>
@@ -117,7 +117,7 @@ export default function MyFunds() {
                               Transfer to
                               <h5 style={{ fontSize: '25px', fontWeight: 'bold', color: 'white' }} class="mb-0 mt-2 white-space-nowrap">Main Wallet</h5>
                             </div>
-                            <form class="row flex-grow-1 gx-1" method="POST" data-ajax="true" data-ajax-complete="MarketToMainComplete" data-ajax-begin="PrependLoader('#MarketSwap');" action="/MyWallet/SwapAmountFTP" novalidate="novalidate">
+                            <form class="row flex-grow-1 gx-1" >
                               <div class="col-sm mb-2 mb-sm-0 position-relative">
                                 <input type="number" class="form-control shadow-none h-pxl-48 rounded-1" name="Payment.Amount" id="FromMarketPYR" placeholder="Amount of PYR" />
                                 <h6 id="MarketMax" type="button" class="p-0 OrangeText shadow-none  bg-transparent border-0 position-absolute end-0 top-0  mt-3 F-size-20 bottom-0 me-3  "> Max </h6>
@@ -126,9 +126,9 @@ export default function MyFunds() {
                                 <input type="number" class="form-control shadow-none h-pxl-48 rounded-1" name="Payment.TwoFactorCode" placeholder="Enter 2FA" />
                               </div>
                               <div class="col-auto">
-                                <button type="submit" class="BtnBorder py-2 px-2 bg-transparent border-0">Transfer</button>
+                                <button type="button" class="BtnBorder py-2 px-2 bg-transparent border-0 transferBtn">Transfer</button>
                               </div>
-                              <input name="__RequestVerificationToken" type="hidden" value="CfDJ8H0zIEi75tdLgpZKnIE1C2CLSQ5GzOplx2INYKAsQH-a3G4_jJ-6Cvw1LyryKtIjwKZz-zfvrYr9mlOI5ZeYpvR4hVzfbuwpX5k2cewLyRYHh3L2LnpknzxKLE3f_rS-NAHCzSgp3vlHGAzD2jRhZUY" /></form>
+                              <input name="__RequestVerificationToken" type="hidden"/></form>
                           </div>
 
 
