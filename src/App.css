@@ -7,7 +7,7 @@
   font-family: 'Roboto', ;
 }
 
-body {
+body{
   background: #181714 !important;
   overflow-x: hidden !important;
 
@@ -56,12 +56,12 @@ body {
 }
 
  .side-nav-link:hover{
-  color:white !important;
+  color:#7D0633 !important;
   cursor: pointer;
 }
 
 .side-nav-link{
-  color:#00A8CC !important ;
+  color:white !important ;
   cursor: pointer;
 
 }
@@ -71,6 +71,10 @@ body {
 /* ///// My Fund & My Assets///////// */
 .card-title{
   color: #21E6C1;
+}
+.transferBtn:hover{
+  background-color:rgb(7, 6, 6) !important;
+  border-radius: 14px 13px 12px 13px !important;
 }
 .wallet{
   background: -webkit-linear-gradient(rgb(247, 12, 12), rgb(246, 246, 66));
@@ -115,6 +119,10 @@ tbody tr:hover{
   color: #639CD9;
   font-family: 'redhat-SB' ;
   font-weight: bold;
+}
+.tabs_events.nav-pills .nav-link:hover{
+  color: #F26000 !important;
+  
 }
 /* ///////////////////////// */
 .tabs_events1.nav-pills .nav-link.active,
