@@ -34,7 +34,7 @@ function Project(props) {
                                 alt="React Bootstrap logo"
                             />
                         </Navbar.Brand>
-                        <Navbar.Brand href="#" className='text-white'>World@Meta</Navbar.Brand>
+                        <Navbar.Brand href="#"  style={{color:"#00FFAB",fontWeight:"bold",fontSize:'150%',fontFamily:"Georgia, serif"}}>World@Meta</Navbar.Brand>
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
                             <Nav
