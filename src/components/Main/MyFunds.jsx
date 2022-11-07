@@ -236,8 +236,7 @@ export default function MyFunds() {
                     </div>
                 </div>
               </div>
-            </div>
-           
+          
             <Paper sx={{ width: '100%', overflow: 'hidden',padding:"5px" ,margin:"3% 0 5% 0" , background: "rgba(0, 0, 0, 0.3)"}}>
       <TableContainer sx={{ maxHeight: 400 }}>
         <Table stickyHeader aria-label=" table" sx={{}}>
@@ -286,7 +285,8 @@ export default function MyFunds() {
         onRowsPerPageChange={handleChangeRowsPerPage}
       />
     </Paper>
-
+    </div>
+    
 
             <div
 
