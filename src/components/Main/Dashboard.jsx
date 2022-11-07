@@ -2,8 +2,17 @@ import React, { useEffect } from 'react'
 import MyAssets from './MyAssets'
 import MyFunds from './MyFunds'
 import Avatar from "@mui/material/Avatar";
+import EmailIcon from '@mui/icons-material/Email';
+import Button from '@mui/material/Button';
+import WalletIcon from '@mui/icons-material/Wallet';
+import SportsBaseballIcon from '@mui/icons-material/SportsBaseball';
+import Person2Icon from '@mui/icons-material/Person2';
+import SettingsIcon from '@mui/icons-material/Settings';
+import LogoutIcon from '@mui/icons-material/Logout';
 import { useAuthContext } from '../../providers/AuthProvider';
 import { useNavigate } from 'react-router-dom';
+import Typography from '@mui/material/Typography';
+import AdbIcon from '@mui/icons-material/Adb';
 export default function Dashboard() {
   const [showdata, setShowdata] = React.useState("MYFUNDS")
   const { connectWithEmail, address, connect } = useAuthContext()
@@ -29,50 +38,78 @@ export default function Dashboard() {
                 src="/images/slide-1.webp"
                 sx={{ width: "70%", height: "70%" }}
               />
-              <h4 className="mt-3 fw-bold" style={{color:"#F94C66"}}>codypanda</h4>
-              <p className="mt-2" style={{color:"#F8ED86",fontSize:'110%'}}>
-                userID : <span  style={{color:"#ffff"}}>00000</span>
+              <h4 className="mt-3 fw-bold text-white" style={{fontFamily:"Beatrix Antiqua"}} >codypanda</h4>
+              <p className="mt-2 text-white" >
+                userID : 00000
               </p>
             </center>
             <div className=" nav nav-pills tabs_events1 d-inline" id="pills-tab">
-              <div onClick={() => linkBtn("MYFUNDS")} className="d-block pt-0 m-0 side-nav-link nav-link active"
-                data-bs-toggle="pill"
-                aria-controls="pills-home"
-                aria-selected="true"
+              <div onClick={() => linkBtn("MYFUNDS")} className="d-block pt-0  text-center m-0 side-nav-link "
+              
               >
-                <h5 className="m-0 pt-2 ">My Funds</h5>
+                {/* <h5 className="m-0 pt-2 " startIcon={<EmailIcon/>}>My Funds</h5> */}
+            <Button   data-bs-toggle="pill"
+                aria-controls="pills-home"
+                aria-selected="true" type='button' startIcon={<EmailIcon/>} className='  pt-2 nav-link active'>My Funds</Button>
+
+              </div>
+              <div onClick={() => linkBtn("MYASSETS")} className="mt-1  text-center pt-0 side-nav-link"
+              
+              
+              >
+                {/* <h5 className="m-0 pt-2">⚙ My Assets</h5> */}
+            <Button   data-bs-toggle="pill"
+                aria-controls="pills-home"
+                aria-selected="false" type='button'   startIcon={<SportsBaseballIcon/>} className='nav-link pt-2 '> My Assets</Button>
+
+              </div>
+              <div className="mt-1  text-center pt-0 side-nav-link"
+               
+              >
+                {/* <h5 className="m-0 pt-2">⚙ Wallet</h5> */}
+            <Button   data-bs-toggle="pill"
+                aria-controls="pills-home"
+                aria-selected="false"  type='button'  startIcon={<WalletIcon/>} className='nav-link text-start pt-2 '> Wallet</Button>
+
               </div>
 
-              <div onClick={() => linkBtn("MYASSETS")} className="mt-1 pt-0 side-nav-link nav-link"
-                data-bs-toggle="pill"
-                aria-controls="pills-home"
-                aria-selected="false"
+              <div className="mt-1  text-center pt-0 side-nav-link"
+               
               >
-                <h5 className="m-0 pt-2">My Assets</h5>
+                {/* <h5 className="m-0 pt-2">⚙ Profile</h5> */}
+            <Button   data-bs-toggle="pill"
+                aria-controls="pills-home"
+                aria-selected="false" type='button'   startIcon={<Person2Icon/>} className='nav-link pt-2 '> Profile</Button>
+
               </div>
 
-              <div className="mt-1 pt-0 side-nav-link nav-link"
-                data-bs-toggle="pill"
-                aria-controls="pills-home"
-                aria-selected="false"
+              <div className="mt-1 text-center pt-0 side-nav-link "
+               
               >
-                <h5 className="m-0 pt-2">Other</h5>
+                {/* <h5 className="m-0 pt-2">⚙  Setting</h5> */}
+            <Button   data-bs-toggle="pill"
+                aria-controls="pills-home"
+                aria-selected="false" type='button'  startIcon={<SettingsIcon/>} className='nav-link pt-2 '>Setting</Button>
+
+              </div>
+              <div className="mt-1  text-center pt-0 side-nav-link "
+              
+              >
+                {/* <h5 className="m-0 pt-2">⚙ Others</h5> */}
+            <Button   data-bs-toggle="pill"
+                aria-controls="pills-home"
+                aria-selected="false" type='button'  startIcon={<EmailIcon/>} className='nav-link pt-2 '>Others</Button>
+
               </div>
 
-              <div className="mt-1 pt-0 side-nav-link nav-link"
-                data-bs-toggle="pill"
-                aria-controls="pills-home"
-                aria-selected="false"
+              <div className="mt-5  text-center pt-0 side-nav-link"
+              
               >
-                <h5 className="m-0 pt-2">Other</h5>
-              </div>
+                {/* <h5 className="m-0 pt-2">Log Out</h5> */}
+            <Button   data-bs-toggle="pill"
+                aria-controls="pills-home"
+                aria-selected="false" type='button'   startIcon={<LogoutIcon/>} className='nav-link pt-2 '>Log Out</Button>
 
-              <div className="mt-1 pt-0 side-nav-link nav-link"
-                data-bs-toggle="pill"
-                aria-controls="pills-home"
-                aria-selected="false"
-              >
-                <h5 className="m-0 pt-2">Other</h5>
               </div>
             </div>
           </div>
