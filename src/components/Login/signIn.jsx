@@ -8,6 +8,8 @@ import Modal from 'react-bootstrap/Modal';
 import LoginModal from './LoginModal';
 import { useAuthContext } from '../../providers/AuthProvider';
 import { useNavigate } from "react-router-dom";
+import Button from '@mui/material/Button';
+import EmailIcon from '@mui/icons-material/Email';
 
 const config = {
   projectId: '77a7ee281a308d086ddd3e231804d56d',
@@ -26,73 +28,42 @@ export default function SignIn() {
 
   const { account } = useAccount()
   const navigate = useNavigate();
-  const { connectWithEmail, address, connect, signMessage } = useAuthContext()
+  const { connectWithEmail, address, connect } = useAuthContext()
   useEffect(() => {
     console.log(account)
-    if (account.address || address) {
-      connect(account.address ? account.address : address, 1)
+    if (account.address) {
+      connect(account.address, 1)
       navigate('/profile')
     }
     // eslint-disable-next-line
-  }, [account, address]);
+  }, [account]);
   return (
-    <div className='main-container' style={{ overFlow: 'hidden' }}>
-      <div className='row'>
-        <div className='col loginMain' style={{ backgroundColor: "#853225", margin: '1% 0% 1% 1%', borderRadius: '2%' }}>
-          <div style={{}}>
-            <div className=''>
-              <Form style={{ padding: "5% 7% 40% 7%" }}>
-                <p className='text-white fw-bold '>World @ Meta</p>
-                <h1 className='text-white fw-bold pt-2 pb-2'>Sign in</h1>
-                <p className='text-white mt-3 ' style={{ letterSpacing: "2px" }}>Log In to your account.</p>
-                <div className="div" style={{ marginLeft: '33%' }}>
-                  <button type='button'
-                    className='loginsBtn p-2 mt-4'
-                    style={{ backgroundColor: "rgb(71 161 255)", color: "rgb(228 231 231)", fontWeight: '700', }}
-                    onClick={() => signMessage()} >
-                    Login with Email
-                  </button>
-                </div>
-
-                <h6 className='text-white my-2 text-center mt-4 fw-bold'>OR</h6>
-                {account.isConnected ? <h1>
-                  <div className=' fw-bold p-2 mt-2' style={{ marginLeft: '33%' }}  >
+    <div className='main_login'>
+        <div className='main-2 mt-4'>
+          <div>
+            <h1>SIGN IN</h1>
+            <p>Login to your account</p>
+            <Button type='button' variant="contained" onClick={() => handleShow()} startIcon={<EmailIcon/>} className='login_btn mt-3'>LOGIN WITH EMAIL</Button>
+    
+            <p className='mt-3 fs-5' style={{}}>or</p>
+            {account.isConnected ? <h1>
+                  <div className='fw-bold p-2 mt-2'   >
                     {account.address.slice(0, 5)}
+
                   </div>
                 </h1> :
-                  <div className=' fw-bold p-2 mt-2' style={{ marginLeft: '33%' }}  >
+                  <div className=' fw-bold p-2 mt-2 ms-5'>
                     <Web3Button class='' />
+            <Button type='button' variant="contained" startIcon={<EmailIcon/>} className='login_btn'>CONNECT WALLET</Button>
+
                   </div>
 
                 }
-                {/* <label className='text-white mt-3' style={{letterSpacing:"2px"}}>Forgot your password? <a href='#' style={{color:'orange',textDecoration:'none'}}>Reset Now</a> </label> */}
-              </Form>
-            </div>
           </div>
+            <img src='./images/worldmetalogo.png' className='mt-5'></img>
         </div>
-        <div className='col-8 signInCarousel'>
-          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-interval="2000">
-            <div class="carousel-indicators" >
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img style={{ width: '1090px', height: '640px' }} src="/images/slide-1.webp" class="d-block " alt="..." />
-              </div>
-              <div class="carousel-item">
-                <img style={{ width: '1090px', height: '640px' }} src="/images/slide-2.webp" class="d-block" alt="..." />
-              </div>
-              <div class="carousel-item">
-                <img style={{ width: '1090px', height: '640px' }} src="/images/slide-3.webp" class="d-block" alt="..." />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Web3Modal config={config} />
+        <Web3Modal config={config} />
       <Modal show={show} onHide={handleClose}><LoginModal handleClose={() => handleClose()} /></Modal>
-    </div>
+      </div>
   )
 }
