@@ -16,7 +16,7 @@ export default function MyAssets() {
                     >
                         <li className="nav-item" role="presentation">
                             <button
-                                className="nav-link active"
+                                className="active"
                                 id="pills-home-tab"
                                 data-bs-toggle="pill"
                                 data-bs-target="#pills-home"
@@ -30,7 +30,7 @@ export default function MyAssets() {
                         </li>
                         <li className="nav-item" role="presentation">
                             <button
-                                className="nav-link"
+                                className="ms-3"
                                 id="pills-profile-tab"
                                 data-bs-toggle="pill"
                                 data-bs-target="#pills-profile"
@@ -44,7 +44,7 @@ export default function MyAssets() {
                         </li>
                         <li className="nav-item" role="presentation">
                             <button
-                                className="nav-link"
+                                className="ms-3"
 
                                 id="pills-land-tab"
                                 data-bs-toggle="pill"
@@ -59,7 +59,7 @@ export default function MyAssets() {
                         </li>
                         <li className="nav-item" role="presentation">
                             <button
-                                className="nav-link"
+                                className="ms-3"
                                 id="pills-VULCANITES-tab"
                                 data-bs-toggle="pill"
                                 data-bs-target="#pills-VULCANITES"
@@ -73,7 +73,7 @@ export default function MyAssets() {
                         </li>
                         <li className="nav-item" role="presentation">
                             <button
-                                className="nav-link"
+                                className="ms-3"
                                 id="pills-SOW-tab"
                                 data-bs-toggle="pill"
                                 data-bs-target="#pills-SOW"
@@ -87,7 +87,7 @@ export default function MyAssets() {
                         </li>
                         <li className="nav-item" role="presentation">
                             <button
-                                className="nav-link"
+                                className="ms-3"
                                 id="pills-GOD-tab"
                                 data-bs-toggle="pill"
                                 data-bs-target="#pills-GOD"
@@ -99,20 +99,7 @@ export default function MyAssets() {
                                 GODS
                             </button>
                         </li>
-                        <li className="nav-item" role="presentation">
-                            <button
-                                className="nav-link"
-                                id="pills-BERSERK-tab"
-                                data-bs-toggle="pill"
-                                data-bs-target="#pills-BERSERK"
-                                type="button"
-                                role="tab"
-                                aria-controls="pills-BERSERK"
-                                aria-selected="false"
-                            >
-                                BERSERK
-                            </button>
-                        </li>
+                       
 
 
                     </ul>
