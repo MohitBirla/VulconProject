@@ -224,22 +224,22 @@ export default function MyFunds() {
 
                         <Box class="card-body blur_color card-main text-white">
 
-                          <Typography variant="h4" style={{ fontFamily: 'Beatrix Antiqua' }} className='card-title' >Matice Main Wallet </Typography>
+                          <Typography variant="h4" style={{ fontFamily: 'Beatrix Antiqua' }} className='card-title' >Matic Main Wallet </Typography>
                           <Box className='bg-white mt-4' style={{ width: '100%', height: '1px' }} ></Box>
                           <Box className='d-flex align-items-center pt-4'>
                             <Typography style={{ color: '#989FAE' }} class=" text-p card-text mt-2">Total Main Wallet Balance</Typography>
-                            <Typography variant="h4" style={{ fontFamily: 'Beatrix Antiqua' }} className='ms-3 '><span>0 </span>Matice</Typography>
+                            <Typography variant="h4" style={{ fontFamily: 'Beatrix Antiqua' }} className='ms-3 '><span>0 </span>Matic</Typography>
                           </Box>
                           <Box className='bg-white mt-4' style={{ width: '100%', height: '1px' }} ></Box>
 
                           <Box class="d-md-flex d-xxl-block d-fhd-flex mt-3">
                             <Box style={{ color: '#989FAE' }} class="me-5 mb-2 mb-md-0 mb-xxl-2 mb-fhd-0">
                               Transfer to
-                              <Typography variant="h4" style={{ fontFamily: 'Beatrix Antiqua' }} class="mb-0 mt-2 text-white">Market Wallet</Typography>
+                              <Typography variant="h4" style={{ fontFamily: 'Beatrix Antiqua' }} class="mb-0 mt-2 text-white">Marketing Wallet</Typography>
                             </Box>
                             <FormControl class="row flex-grow-1 gx-1">
                               <Box class="col-6 position-relative mb-2 mb-sm-0">
-                                <input type="number" outline="none" id="FromMainPYR" min="1" class="form-control shadow-none h-pxl-48 rounded-1 text-white" placeholder="Enter Amount of PYR" />
+                                <input type="number" outline="none" id="FromMainPYR" min="1" class="form-control shadow-none h-pxl-48 rounded-1 text-white" placeholder="Enter Amount of MATIC" />
 
                                 <Typography variant="h6" id="MainMax" type="button" class="p-0 OrangeText shadow-none  bg-transparent border-0 position-absolute end-0 top-0  mt-3 F-size-20 bottom-0 me-3  "> Max </Typography>
                               </Box>
