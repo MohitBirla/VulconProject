@@ -11,6 +11,7 @@ import SignIn from '../Login/signIn';
 import { useAuthContext } from '../../providers/AuthProvider';
 import Dashboard from '../Main/Dashboard';
 import logo from './../../assets/worldmetalogo.png'
+import { useDisconnect } from '@web3modal/react'
 
 export function shorten(str) {
     if (str.length < 10) return str;
@@ -19,7 +20,7 @@ export function shorten(str) {
 
 function Project(props) {
 
-    const { connectWithEmail, address, disconnect } = useAuthContext()
+    const { connectWithEmail, address, disconnectAcc } = useAuthContext()
     return (
         <>
             <Router>
@@ -34,7 +35,7 @@ function Project(props) {
                                 alt="React Bootstrap logo"
                             />
                         </Navbar.Brand>
-                        <Navbar.Brand href="#"  style={{color:"#00FFAB",fontWeight:"bold",fontSize:'150%',fontFamily:"Georgia, serif"}}>World@Meta</Navbar.Brand>
+                        <Navbar.Brand href="#" style={{ color: "#00FFAB", fontWeight: "bold", fontSize: '150%', fontFamily: "Georgia, serif" }}>World@Meta</Navbar.Brand>
                         <Navbar.Toggle aria-controls="navbarScroll" />
                         <Navbar.Collapse id="navbarScroll">
                             <Nav
@@ -45,7 +46,10 @@ function Project(props) {
                             </Nav>
                             <Form className="d-flex">
                                 <div className="link">{
-                                    address ? <span className='text-white' onClick={() => disconnect()} >{shorten(address)}</span> : <Link to='/login'>
+                                    address ? <span className='text-white' onClick={() => {
+                                        disconnectAcc()
+
+                                    }} >{shorten(address)}</span> : <Link to='/login'>
                                         <button type='button' className='text-white fw-bold ps-4 pe-4 rounded-2' style={{ backgroundColor: "rgb(70 155 244)", color: "#27262C", width: '100%', height: '100%', fontSize: '1.20rem' }}>
                                             Login
                                         </button>
@@ -59,6 +63,7 @@ function Project(props) {
                     </Container>
                 </Navbar>
                 <Routes>
+                    {/* <Route path="/" element={<SignIn />} /> */}
                     <Route path="/login" element={<SignIn />} />
                     <Route path="/profile" element={<Dashboard />} />
                 </Routes>
