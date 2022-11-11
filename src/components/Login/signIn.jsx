@@ -10,6 +10,9 @@ import { useAuthContext } from '../../providers/AuthProvider';
 import { useNavigate } from "react-router-dom";
 import Button from '@mui/material/Button';
 import EmailIcon from '@mui/icons-material/Email';
+import WalletIcon from '@mui/icons-material/Wallet';
+
+import { Box, Typography } from '@mui/material';
 
 const config = {
   projectId: '77a7ee281a308d086ddd3e231804d56d',
@@ -25,7 +28,6 @@ export default function SignIn() {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
   const { account } = useAccount()
   const navigate = useNavigate();
   const { connectWithEmail, address, connect } = useAuthContext()
@@ -38,32 +40,32 @@ export default function SignIn() {
     // eslint-disable-next-line
   }, [account]);
   return (
-    <div className='main_login'>
-        <div className='main-2 mt-4'>
-          <div>
-            <h1>SIGN IN</h1>
-            <p>Login to your account</p>
-            <Button type='button' variant="contained" onClick={() => handleShow()} startIcon={<EmailIcon/>} className='login_btn mt-3'>LOGIN WITH EMAIL</Button>
-    
-            <p className='mt-3 fs-5' style={{}}>or</p>
-            {account.isConnected ? <h1>
-                  <div className='fw-bold p-2 mt-2'   >
-                    {account.address.slice(0, 5)}
+    <Box className='main_login'>
+      <Box className='main-2'>
+        <Box>
+          <Typography variant="h1" style={{ fontSize: '45px', fontWeight: 'bold', fontFamily: "Beatrix Antiqua" }}  >SIGN IN</Typography>
+          <Typography variant="p" >Login to your account</Typography>
+          <Button type='button' variant="contained" onClick={() => handleShow()} startIcon={<EmailIcon />} className='login_btn mt-4'>LOGIN WITH EMAIL</Button>
 
-                  </div>
-                </h1> :
-                  <div className=' fw-bold p-2 mt-2 ms-5'>
-                    <Web3Button class='' />
-            <Button type='button' variant="contained" startIcon={<EmailIcon/>} className='login_btn'>CONNECT WALLET</Button>
+          <Typography variant="p" className='d-block fs-5 fw-bold mt-3' style={{}}>or</Typography>
+          {account.isConnected ? <Typography variant="h1">
+            <Box className='fw-bold p-2 mt-2'>
+              {account.address.slice(0, 5)}
 
-                  </div>
+            </Box>
+          </Typography> :
+            <Box className=' fw-bold p-2 mt-2'>
+              <Web3Button class='' />
+              <Button type='button' variant="contained" startIcon={<WalletIcon />} className='login_btn'>CONNECT WALLET</Button>
 
-                }
-          </div>
-            <img src='./images/worldmetalogo.png' className='mt-5'></img>
-        </div>
-        <Web3Modal config={config} />
+            </Box>
+
+          }
+        </Box>
+        <img src='./images/worldmetalogo.png' className='mt-5'></img>
+      </Box>
+      <Web3Modal config={config} />
       <Modal show={show} onHide={handleClose}><LoginModal handleClose={() => handleClose()} /></Modal>
-      </div>
+    </Box>
   )
 }
