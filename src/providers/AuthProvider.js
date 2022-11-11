@@ -7,6 +7,7 @@ import {
 } from "react";
 import axios from 'axios';
 import { MetaKeep } from 'metakeep'
+import { useDisconnect } from '@web3modal/react'
 
 const sdk = new MetaKeep({
   environment: "Development",
@@ -22,7 +23,7 @@ export const AuthContext = createContext({
   chainId: null,
   connectWithEmail: () => null,
   connect: () => null,
-  disconnect: () => null,
+  disconnectAcc: () => null,
   signMessage: () => null
 });
 
@@ -32,9 +33,10 @@ export const AuthProvider = ({ children }) => {
   const [address, setAddress] = useState(null);
   const [loading, setLoading] = useState(false);
   const [chainId, setChainId] = useState(null);
-
+  const disconnect = useDisconnect()
   const instance = axios.create({
     baseURL: 'https://api.metakeep.xyz/v3/getWallet',
+    timeout: 5000,
     headers: {
       accept: 'application/json',
       'content-type': 'application/json',
@@ -43,7 +45,8 @@ export const AuthProvider = ({ children }) => {
   });
   axios.defaults.headers.post['Content-Type'] = 'application/json';
 
-  const disconnect = () => {
+  const disconnectAcc = () => {
+    disconnect();
     setAddress(null);
     setChainId(null);
   };
@@ -87,7 +90,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ address, chainId, setAddress, connectWithEmail, loading, connect, disconnect, signMessage }}
+      value={{ address, chainId, setAddress, connectWithEmail, loading, connect, disconnectAcc, signMessage }}
     >
       {children}
     </AuthContext.Provider>

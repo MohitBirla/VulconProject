@@ -3,7 +3,7 @@ import { BsGoogle } from "react-icons/bs";
 import { BsWalletFill } from "react-icons/bs";
 import Form from 'react-bootstrap/Form';
 import { Web3Modal } from '@web3modal/react'
-import { Web3Button, useAccount } from '@web3modal/react';
+import { Web3Button, useAccount, useConnectModal } from '@web3modal/react';
 import Modal from 'react-bootstrap/Modal';
 import LoginModal from './LoginModal';
 import { useAuthContext } from '../../providers/AuthProvider';
@@ -25,7 +25,7 @@ const config = {
 
 export default function SignIn() {
   const [show, setShow] = useState(false);
-
+  const { isOpen, open, close } = useConnectModal()
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const { account } = useAccount()
@@ -55,8 +55,7 @@ export default function SignIn() {
             </Box>
           </Typography> :
             <Box className=' fw-bold p-2 mt-2'>
-              <Web3Button class='' />
-              <Button type='button' variant="contained" startIcon={<WalletIcon />} className='login_btn'>CONNECT WALLET</Button>
+              <Button type='button' variant="contained" startIcon={<WalletIcon />} className='login_btn' onClick={() => open()}>CONNECT WALLET</Button>
 
             </Box>
 
