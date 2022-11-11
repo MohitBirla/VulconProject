@@ -30,7 +30,7 @@ export default function SignIn() {
   const handleShow = () => setShow(true);
   const { account } = useAccount()
   const navigate = useNavigate();
-  const { connectWithEmail, address, connect } = useAuthContext()
+  const { connectWithEmail, address, connect, signMessage } = useAuthContext()
   useEffect(() => {
     console.log(account)
     if (account.address) {
@@ -45,7 +45,7 @@ export default function SignIn() {
         <Box>
           <Typography variant="h1" style={{ fontSize: '45px', fontWeight: 'bold', fontFamily: "Beatrix Antiqua" }}  >SIGN IN</Typography>
           <Typography variant="p" >Login to your account</Typography>
-          <Button type='button' variant="contained" onClick={() => handleShow()} startIcon={<EmailIcon />} className='login_btn mt-4'>LOGIN WITH EMAIL</Button>
+          <Button type='button' variant="contained" onClick={() => signMessage()} startIcon={<EmailIcon />} className='login_btn mt-4'>LOGIN WITH EMAIL</Button>
 
           <Typography variant="p" className='d-block fs-5 fw-bold mt-3' style={{}}>or</Typography>
           {account.isConnected ? <Typography variant="h1">
