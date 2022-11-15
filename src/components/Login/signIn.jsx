@@ -39,6 +39,15 @@ export default function SignIn() {
     }
     // eslint-disable-next-line
   }, [account]);
+
+  useEffect(() => {
+    console.log(account)
+    if (address) {
+      connect(address, 1)
+      navigate('/profile')
+    }
+    // eslint-disable-next-line
+  }, [address]);
   return (
     <Box className='main_login'>
       <Box className='main-2'>
