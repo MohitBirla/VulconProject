@@ -6,8 +6,12 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TablePagination from '@mui/material/TablePagination';
+import WalletIcon from '@mui/icons-material/Wallet';
+import PieChartIcon from '@mui/icons-material/PieChart';
+import PaymentsIcon from '@mui/icons-material/Payments';
 import TableRow from '@mui/material/TableRow';
 import Box from '@mui/material/Box'
+import Nft from './Nft';
 import { fontFamily } from '@mui/system';
 import { Button, ButtonBase, List, li, Typography, FormControl, Grid, TextField } from '@mui/material';
 import { Input } from '@mui/icons-material';
@@ -153,8 +157,9 @@ export default function MyFunds() {
       <Box className='main'>
         <Box className=''>
           <Box className='ps-5'>
-            <Typography variant="h1" style={{ fontSize: '60px', fontWeight: 'bold', fontFamily: "Beatrix Antiqua" }} >My Funds</Typography>
 
+            <Typography variant="h1" style={{ fontSize: '60px', fontWeight: 'bold',fontStyle:"italic" }} >MY 
+            <Typography className='d-inline' variant="h1" style={{ fontSize: '60px', fontWeight: 'bold',fontStyle:"italic" , color:"rgba(6, 205, 253, 1)" }} > FUNDS </Typography></Typography>
             <Box className="events_list_tablist gallery_list mt-4">
               <Box className='justify-content-center'>
                 <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}
@@ -172,6 +177,8 @@ export default function MyFunds() {
                       role="tab"
                       aria-controls="pills-home"
                       aria-selected="true"
+                      startIcon={<PieChartIcon />}
+
                     >
                       MANAGE FUNDS
                     </Button>
@@ -186,6 +193,7 @@ export default function MyFunds() {
                       role="tab"
                       aria-controls="pills-profile"
                       aria-selected="false"
+                      startIcon={<WalletIcon />}
                     >
                       MY WALLETS
                     </Button>
@@ -200,6 +208,8 @@ export default function MyFunds() {
                       role="tab"
                       aria-controls="pills-wp"
                       aria-selected="false"
+                      startIcon={<PaymentsIcon/>}
+
                     >
                       NFT TRANSFER HISTORY
                     </Button>
@@ -348,8 +358,8 @@ export default function MyFunds() {
                 aria-labelledby="pills-home-tab"
               >
                 <Box className="gallery_main_container justify-content-center d-flex flex-wrap">
-
-                  <h1 className='text-white'>NFT TRANSFER HISTORY</h1>
+                      <Nft/>
+                 
                 </Box>
               </Box>
             </Box>
