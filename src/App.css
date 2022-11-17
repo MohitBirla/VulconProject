@@ -223,6 +223,11 @@ border-radius: 5px;
   border: 2px solid rgba(6, 205, 253, 1) !important;
 
 }
+.swap_history{
+  background: linear-gradient(180deg, rgba(18, 157, 222, 1), rgba(21, 43, 110, 1));
+  padding: 1% 2% 1% 2%;
+
+}
 .OrangeText {
   color: #f26000;
 }
@@ -246,9 +251,12 @@ border-radius: 5px;
   right: 0;
   bottom: 0;
   left: 0;
+  width: 100%;
   border-radius: 8px;
-  padding: 2px;
-background: linear-gradient(180deg, #F59E00 0%, #9F4A00 87.5%);
+  padding: 2% 5% !important;
+/* background: linear-gradient(180deg, #F59E00 0%, #9F4A00 87.5%); */
+background: linear-gradient(180deg, rgba(18, 157, 222, 1), rgba(21, 43, 110, 1));
+
   mask-composite: exclude;
   z-index: -1;
 }
@@ -310,6 +318,10 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+.table_data{
+  background: linear-gradient(180deg, rgba(18, 157, 222, 1), rgba(21, 43, 110, 1));
+
 }
 /* ////////////////////////////////// media Queries /////////////////////////////////////////////// */
 

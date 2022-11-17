@@ -262,7 +262,7 @@ export default function MyFunds() {
                       </Box>
                     </Box>
                   </Box>
-                  <Box className='row mt-5'>
+                  <Box className='row mt-5 swap_history'>
                     <Box className='col-4'>
                       <Typography variant="h4" style={{ fontFamily: 'Beatrix Antiqua' }} class="card-title">Swapping <span className='wallet'>History</span> </Typography>
                     </Box>
@@ -274,13 +274,13 @@ export default function MyFunds() {
                 </Box>
               </Box>
 
-              <Paper sx={{ width: '100%', overflow: 'hidden', padding: "5px", margin: "3% 0 5% 0", background: "rgba(0, 0, 0, 1)" }}>
+              <Paper className='table_data' sx={{ width: '100%', overflow: 'hidden', padding: "5px", margin: "3% 0 5% 0",}}>
                 <TableContainer sx={{ maxHeight: 400 }}>
                   <Table stickyHeader aria-label=" table" sx={{}}>
                     <TableHead>
                       <TableRow>
                         {columns.map((column) => (
-                          <TableCell className='text-white fw-bold' sx={{ background: "#404040", }}
+                          <TableCell className='text-white fw-bold' sx={{ background: "#073F59", }}
                             key={column.id}
                             align={column.align}
                             style={{ minWidth: column.minWidth }}

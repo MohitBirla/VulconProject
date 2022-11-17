@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import MyAssets from './MyAssets'
 import MyFunds from './MyFunds'
+import Profile from './Profile';
 import Avatar from "@mui/material/Avatar";
 import EmailIcon from '@mui/icons-material/Email';
 import Button from '@mui/material/Button';
@@ -81,9 +82,10 @@ export default function Dashboard() {
               >
                 {/* <h5 className="m-0 pt-2">⚙ Profile</h5> */}
                 <Button data-bs-toggle="pill"
+                  onClick={() => linkBtn("MYPROFILE")}
                   aria-controls="pills-home"
                   aria-selected="false" type='button' startIcon={<Person2Icon />} className='nav-link pt-2 '> Profile</Button>
-
+                
               </Box>
 
               <Box className="mt-1 text-center pt-0 side-nav-link "
@@ -121,6 +123,8 @@ export default function Dashboard() {
       <Box className='px-lg-5 pt-2 col-lg-9 col-md-9 col-12 text-white'>
         {showdata === "MYFUNDS" ? <MyFunds /> : ""}
         {showdata === "MYASSETS" ? <MyAssets /> : ""}
+        {showdata === "MYPROFILE" ? <Profile /> : ""}
+
       </Box>
     </Box>
   )
