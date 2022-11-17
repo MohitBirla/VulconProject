@@ -1,62 +1,97 @@
-@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', ;
 }
 
+
+                
+
 body{
-  overflow-x: hidden !important;
-  font-family: "Beatrix Antiqua" !important;
+  /* overflow-x: hidden !important; */
+  /* font-family: "Eurostile LT Pro Unicode" !important; */
+ 
+
 }
 
 /* ////////////////////// Login Css /////////////////////////////// */
 .main_login{
-  background-image: url(/public/images/vulcan\ background.png) !important;
+  background-image: url(/public/images/login_bg.jpeg) !important;
   /* background-repeat: no-repeat; */
   /* width:100% !important; */
-  background-position: center;
-  height:100%;
+  background-size: cover;
+  /* height:100%; */
   overflow: hidden;
-  background-size:auto !important;
-  padding: 4% 2% 5% 4% !important;
+  background-repeat: no-repeat;
+  /* background-size:auto !important; */
+  /* padding: "5% 5% 5% 4%" !important; */
+
   
 }
+.main_1{
+  padding: 8% !important
+}
+.innerLogin{
+  padding: 10%;
+}
 .main-2{
-  width: 500px;
-  height: 500px;
+  /* width: 500px; */
+  /* height: 500px; */
   /* background-color:rgba(244, 242, 236, 0.3); */
-  background: rgba(0, 0, 0, 0.3) !important;
+  background: rgba(70, 61, 207, 0.3) !important;
+  backdrop-filter: blur(10px);
   justify-content: center;
   text-align: center;
-  padding: 5%;
+  /* padding:  */
+  /* margin: auto 15px 100px 10px ; */
   margin-top: auto !important;
-font-family:monospace !important;
-border-radius: 10px;
+  font-family:monospace !important;
+  border-radius: 10px;
 
 }
-.main-2 h1{
-font-family:monospace;
-font-weight: bold;
+@import url('https://fonts.cdnfonts.com/css/supertalls');
+
+.wellCome{
+  /* font-family: " Kenyan Coffee" !important; */
+  font-family: 'Supertalls', sans-serif !important;                
+  font-size: 12rem !important;
+  /* font-weight: bold;   */
+  letter-spacing: 11px !important;                                     
+  /* font-style: "Regular"; */
+  color:white;
+  margin-top: 75px !important;
+  /* height: 100px !important;
+  width: 100px !important; */
+  justify-content: center !important;
+  align-items: center !important;
+}
+.wellCome2{
+  -webkit-text-stroke: 1.5px black;
+  color: white;
+  font-size: 3rem !important;
 }
 .main-2 p{
 
   }
 
 .main_login p{
-  font-family: monospace;
+  /* font-family: monospace; */
   font-weight: bold;
   word-spacing: 5px !important;
 }
 .login_btn{
   font-weight: bold !important;
   color: white !important;
-  background: -webkit-linear-gradient(rgb(252, 187, 7), rgb(236, 117, 21)) !important;
-  line-height: 30px !important;
-  font-size: 'Beatrix Antiqua' !important;
-  padding: 2% 8% 2% 8% !important;
+  /* background: -webkit-linear-gradient(#152B6E,#129DDE) !important; */
+  background: linear-gradient(#152B6E 0%, #129DDE 87.5%) !important;
+  padding: 3% 6% 3% 6% !important;
+  max-width: auto;
+  border-radius: 15px !important;
+  /* line-height: 30px !important; */
+  /* font-size: 'Beatrix Antiqua' !important; */
+  /* padding: 2% 8% 2% 8% !important; */
 }
 
 
@@ -65,15 +100,29 @@ font-weight: bold;
 
 /* ///////////////////////// Dashboard side nav //////////////////////////////// */
 .main_dashboard {
-  background-image: url(/public/images/background-2.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
+  /* background-image: url(/public/images/vulcanbg_2.jpeg); */
+  background-image: url(/public/images/login_bg.jpeg) !important;
+  
+  background-position: center;
+  position: absolute;
+  /* background-repeat: no-repeat !important; */
+  /* background-size: cover !important; */
+  /* overflow: hidden; */
+
 }
 .blur_color{
-   background: rgba(0, 0, 0, 0.3) !important;
+   /* background: rgba(0, 0, 0, 0.3) !important; */
+
+  backdrop-filter: blur(15px) !important;
+  background: -webkit-linear-gradient(#1F396C,#c0369b94) !important;
+
+
+
 }
 .side_main{
   padding-bottom: 5%!important;
+  border: 2px solid rgba(6, 205, 253, 1) !important;
+
 }
 .side_bar_div{
   padding: 1% 4% !important;
@@ -89,6 +138,19 @@ font-weight: bold;
   cursor: pointer;
 
 }
+/* //////////////////////////////// NFT //////////////////////////////// */
+.nftMainBox{
+  padding: 2% !important;
+}
+.nftBox{
+  /* background: linear-gradient(rgba(8, 10, 11, 0.38) 0%, rgba(93, 41, 103, 0.02) 100%) !important; */
+  background-color: #352E5B !important;
+  width: 100% !important;
+  padding: 0% 3% 0% 3% !important;
+
+}
+
+/* ///////////////////////////////////////////////////////////////////////// */
 
 
 
@@ -110,9 +172,11 @@ font-weight: bold;
   }
   .tabs_events.nav-pills button.active,
 .nav-pills .show>.button {
-  background: linear-gradient(180deg, #F59E00 0%, #9F4A00 87.5%);
+  /* background: linear-gradient(180deg, #F59E00 0%, #9F4A00 87.5%); */
+  background: linear-gradient(180deg, rgba(18, 157, 222, 1), rgba(21, 43, 110, 1));
+
   border-radius: 5px;
-  border: 2px solid none !important;
+  border: none !important;
 
   border-bottom: 3px solid;
 }
@@ -120,16 +184,17 @@ font-weight: bold;
 .tabs_events.nav-pills button {
   padding: 10px 35px;
   transition: ease 0.5s;
-  font-family: 'Beatrix Antiqua';
+  /* font-family: 'Beatrix Antiqua'; */
   color: white;
   width: 100%;
   border-radius: 5px;
-  border: 1px solid #f6a819c5 !important;
+  border: 2px solid rgba(6, 205, 253, 1) !important;
+  padding: 2% 0% 3% 0% !important;
   background-color:transparent;
 }
 .tabs_events1.nav-pills button {
   transition: ease 0.5s;
-  font-family: 'Beatrix Antiqua';
+  /* font-family: 'Beatrix Antiqua'; */
   color: white;
   width: 70%;
   /* border-radius: 5px; */
@@ -137,13 +202,15 @@ font-weight: bold;
 }
 .tabs_events1.nav-pills button.active,
 .nav-pills .show>.button {
-  background: linear-gradient(180deg, #F59E00 0%, #9F4A00 87.5%);
+  background: linear-gradient(180deg, rgba(18, 157, 222, 1), rgba(21, 43, 110, 1));
+
+
   /* border-radius: 5px; */
   /* border: 2px solid none !important; */
   margin-top: 10px !;
 }
 .tabs_events.nav-pills button:hover{
-  background: linear-gradient(180deg, #F59E00 0%, #9F4A00 87.5%);
+  background: linear-gradient(180deg, rgba(18, 157, 222, 1), rgba(21, 43, 110, 1));
 border-radius: 5px;
 }
 /* ///////////// Side nav //////////// */
@@ -153,6 +220,8 @@ border-radius: 5px;
   padding: 5% !important;
   border-radius: 5px;
   background: none;
+  border: 2px solid rgba(6, 205, 253, 1) !important;
+
 }
 .OrangeText {
   color: #f26000;
@@ -257,5 +326,8 @@ input[type=number] {
   }
   .side_bar_div{
     padding: 0.5% !important;
+  }
+  .main-2{
+    padding: 0 !important;
   }
 }
