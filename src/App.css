@@ -323,6 +323,18 @@ input[type=number] {
   background: linear-gradient(180deg, rgba(18, 157, 222, 1), rgba(21, 43, 110, 1));
 
 }
+/* ////////////////////////////      Profile    ////////////////////////////////////////// */
+.text_label{
+  color: rgba(255, 255, 255, 0.822)  !important;
+  font-family: "Eurostile LT Pro Unicode" !important;
+}
+
+.profile_input{
+  color: white !important;
+  border: 1.5px solid #1a97ef  !important;
+ 
+}
+
 /* ////////////////////////////////// media Queries /////////////////////////////////////////////// */
 
 @media screen and (max-width: 1200px) {
