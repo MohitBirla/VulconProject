@@ -15,6 +15,7 @@ import Nft from './Nft';
 import { fontFamily } from '@mui/system';
 import { Button, ButtonBase, List, li, Typography, FormControl, Grid, TextField } from '@mui/material';
 import { Input } from '@mui/icons-material';
+import MyWallet from './MyWallet';
 
 const columns = [
   { id: 'Id', label: 'Id', minWidth: 100 },
@@ -339,8 +340,8 @@ export default function MyFunds() {
                 role="tabpanel"
                 aria-labelledby="pills-home-tab"
               >
-                <Box className="gallery_main_container justify-content-center d-flex flex-wrap">
-                  <h1 className='text-white'>MY WALLETS</h1>
+                <Box className="">
+                  <MyWallet/>
                 </Box>
               </Box>
             </Box>

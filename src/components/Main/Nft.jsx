@@ -1,167 +1,163 @@
 import React from 'react'
 import Avatar from "@mui/material/Avatar";
-import { Box, Grid, Typography } from '@mui/material'
+import { Box, Grid, InputAdornment, InputLabel, MenuItem, Select, TextField, Typography } from '@mui/material'
 
-import Button from '@mui/material/Button';
-import Paper from '@mui/material/Paper';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TablePagination from '@mui/material/TablePagination';
-import TableRow from '@mui/material/TableRow';
+import SearchIcon from '@mui/icons-material/Search';
+import { FormControl } from 'react-bootstrap';
+
+
 
 
 export default function Nft() {
 
+
     return (
         <>
 
-            <Box>
-                <Box className='blur_color '>
-                    <Box className='mt-5 nftMainBox'>
-                        <Typography variant="h1" style={{ fontSize: '25px', fontWeight: 'bold', }}  sx={{ pb: 3}} >My NFts</Typography>
-                        <Grid className='' container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                            <Grid item xs={6} md={3}>
-                                <Box class="card  border border-light nftBox">
-                                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 0 }}>
-                                        <Grid item xs={4}>
-                                        <Box sx={{ mt: 2}}> <Avatar /> </Box>
-                                        </Grid>
-                                        <Grid item xs={8}>
-                                            <Box>
-                                            <Typography  style={{ fontSize: '20px', fontWeight: 'bold' }} sx={{ p: 0 ,m:0}} class="card-title">VulcanMarket NFTs</Typography>
-                                        <Typography  variant="h1" class=" fw-bolder " sx={{ p: 0 ,m:0}} >0</Typography>
-                                            </Box>
-                                        
-                                        </Grid>
+
+
+            <Box className='blur_color  '>
+                <Box className='mt-5 nftMainBox'>
+                    <Typography variant="h1" style={{ fontSize: '28px', fontWeight: 'bold', fontFamily: 'Eurostile LT Pro Unicode' }} sx={{ pb: 3 }} >My <span style={{ color: "rgba(6, 205, 253, 1)" }}> NFts </span></Typography>
+                    <Grid className='' container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                        <Grid item xs={6} md={3}>
+                            <Box class="card boXCard nftBox p-2" >
+                                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 0 }}>
+                                    <Grid item xs={3}>
+                                        <Box sx={{ mt: 3 }}> <Avatar /> </Box>
+                                    </Grid>
+                                    <Grid item xs={9}>
+                                        <Box>
+                                            <Typography className="card-title cardText mt-2 mx-3 ">VulcanMarket NFTs</Typography>
+                                            <Typography variant="h5" sx={{ mt: 3 }} className="mx-4"   >25</Typography>
+                                        </Box>
 
                                     </Grid>
-                                    {/* <Box class="card-body">
-                                        <Box className='row'>
-                                            <Box className='col-4'> <Avatar /> </Box>
-                                            <Box className='col-8'>
-                                                <Typography style={{ fontSize: '15px', fontWeight: 'bold' }} class="card-title">VulcanMarket NFTs</Typography>
-                                                <Typography class=" fw-bolder fs-2">0</Typography>
-                                            </Box>
-                                        </Box>
-                                    </Box> */}
 
-                                </Box>
-                            </Grid>
-                            <Grid item xs={6} md={3}>
-                                <Box class="card  border border-light nftBox ">
-                                    <Box class="card-body">
-                                        <Box className='row'>
-                                            <Box className='col-4'> <Avatar style={{ fontSize: '4rem' }} /> </Box>
-                                            <Box className='col-8'>
-                                                <Typography style={{ fontSize: '20px', fontWeight: 'bold' }} class="card-title">VulcanMarket NFTs</Typography>
-                                                <Typography class=" fw-bolder fs-2">0</Typography>
-                                            </Box>
-                                        </Box>
-                                    </Box>
+                                </Grid>
 
-                                </Box>
-                            </Grid>
-                            <Grid item xs={6} md={3}>
-                                <Box class="card  border border-light nftBox ">
-                                    <Box class="card-body">
-                                        <Box className='row'>
-                                            <Box className='col-4'> <Avatar style={{ fontSize: '4rem' }} /> </Box>
-                                            <Box className='col-8'>
-                                                <Typography style={{ fontSize: '20px', fontWeight: 'bold' }} class="card-title">VulcanMarket NFTs</Typography>
-                                                <Typography class=" fw-bolder fs-2">0</Typography>
-                                            </Box>
-                                        </Box>
-                                    </Box>
 
-                                </Box>
-                            </Grid>
-                            <Grid item xs={6} md={3}>
-                                <Box class="card  border border-light nftBox ">
-                                    <Box class="card-body">
-                                        <Box className='row'>
-                                            <Box className='col-4'> <Avatar style={{ fontSize: '4rem' }} /> </Box>
-                                            <Box className='col-8'>
-                                                <Typography style={{ fontSize: '20px', fontWeight: 'bold' }} class="card-title">VulcanMarket NFTs</Typography>
-                                                <Typography class=" fw-bolder fs-2">0</Typography>
-                                            </Box>
-                                        </Box>
-                                    </Box>
-
-                                </Box>
-                            </Grid>
+                            </Box>
                         </Grid>
-                        {/* <Box className='nftBox' >
-                        <Box class=" col-lg-3 col-md-6 col-12" >
-                                            <Box class="card  border border-light ">
-                                                <Box class="card-body">
-                                                    <Box className='row'>
-                                                        <Box className='col-4'> <Avatar style={{ fontSize: '4rem' }} /> </Box>
-                                                        <Box className='col-8'>
-                                                            <Typography style={{ fontSize: '20px', fontWeight: 'bold' }} class="card-title">VulcanMarket NFTs</Typography>
-                                                            <Typography class=" fw-bolder fs-2">0</Typography>
-                                                        </Box>
-                                                    </Box>
-                                                </Box>
-
-                                            </Box>
+                        <Grid item xs={6} md={3}>
+                            <Box class="card boXCard nftBox p-2" >
+                                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 0 }}>
+                                    <Grid item xs={3}>
+                                        <Box sx={{ mt: 3 }}> <Avatar /> </Box>
+                                    </Grid>
+                                    <Grid item xs={9}>
+                                        <Box>
+                                            <Typography className="card-title cardText mt-2 mx-3 ">Agora NFTs</Typography>
+                                            <Typography variant="h5" sx={{ mt: 3 }} className="mx-4"   >09</Typography>
                                         </Box>
-                                        <Box class=" col-lg-3 col-md-6 col-12" >
-                                            <Box class="card  border border-light ">
-                                                <Box class="card-body">
-                                                    <Box className='row'>
-                                                        <Box className='col-4'> <Avatar style={{ fontSize: '4rem' }} /> </Box>
-                                                        <Box className='col-8'>
-                                                            <Typography style={{ fontSize: '20px', fontWeight: 'bold' }} class="card-title">VulcanMarket NFTs</Typography>
-                                                            <Typography class=" fw-bolder fs-2">0</Typography>
-                                                        </Box>
-                                                    </Box>
-                                                </Box>
-
-                                            </Box>
+                                    </Grid>
+                                </Grid>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={6} md={3}>
+                            <Box class="card boXCard nftBox p-2" >
+                                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 0 }}>
+                                    <Grid item xs={3}>
+                                        <Box sx={{ mt: 3 }}> <Avatar /> </Box>
+                                    </Grid>
+                                    <Grid item xs={9}>
+                                        <Box>
+                                            <Typography className="card-title cardText mt-2 mx-3 ">Total NFTs</Typography>
+                                            <Typography variant="h5" sx={{ mt: 3 }} className="mx-4"   >12</Typography>
                                         </Box>
-                                        <Box class=" col-lg-3 col-md-6 col-12" >
-                                            <Box class="card  border border-light ">
-                                                <Box class="card-body">
-                                                    <Box className='row'>
-                                                        <Box className='col-4'> <Avatar style={{ fontSize: '4rem' }} /> </Box>
-                                                        <Box className='col-8'>
-                                                            <Typography style={{ fontSize: '20px', fontWeight: 'bold' }} class="card-title">VulcanMarket NFTs</Typography>
-                                                            <Typography class=" fw-bolder fs-2">0</Typography>
-                                                        </Box>
-                                                    </Box>
-                                                </Box>
-
-                                            </Box>
+                                    </Grid>
+                                </Grid>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={6} md={3}>
+                            <Box class="card boXCard nftBox p-2" >
+                                <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 0 }}>
+                                    <Grid item xs={3}>
+                                        <Box sx={{ mt: 3 }}> <Avatar /> </Box>
+                                    </Grid>
+                                    <Grid item xs={9}>
+                                        <Box>
+                                            <Typography className="card-title cardText mt-2 mx-3 ">Total NFTs Sold</Typography>
+                                            <Typography variant="h5" sx={{ mt: 3 }} className="mx-4"   >16</Typography>
                                         </Box>
-                                        <Box class=" col-lg-3 col-md-6 col-12" >
+                                    </Grid>
+                                </Grid>
+                            </Box>
+                        </Grid>
+                    </Grid>
 
-                                            <Box class="card  border border-light ">
-                                                <Box class="card-body">
-                                                    <Box className='row'>
-                                                        <Box className='col-4'> <Avatar style={{ fontSize: '4rem' }} /> </Box>
-                                                        <Box className='col-8'>
-                                                            <Typography style={{ fontSize: '20px', fontWeight: 'bold' }} class="card-title">VulcanMarket NFTs</Typography>
-                                                            <Typography class=" fw-bolder fs-2">0</Typography>
-                                                        </Box>
-                                                    </Box>
-                                                </Box>
 
-                                            </Box>
-                                        </Box>
-
-                        </Box> */}
-
-                    </Box>
                 </Box>
 
 
 
 
 
+                <Grid container spacing={2}>
+
+                    <Grid item xs={3} md={3}>
+                        <Box>
+
+                            <TextField
+                                // id="outlined-start-adornment"
+                                sx={{ m: 1, width: '25ch', height: '45px', "& fieldset": { border: 'none' }, }}
+                                placeholder='search...'
+                                className='rounded-4 search_background '
+
+                                InputProps={{
+                                    startAdornment: <InputAdornment position="start"><SearchIcon /></InputAdornment>,
+                                }}
+                            />
+
+                        </Box>
+                    </Grid>
+                    <Grid item xs={2} md={3}>
+                        <Box>
+
+                            <Select
+                                sx={{ m: 1, width: '20ch', height: '45px', "& fieldset": { border: 'none' }, }}
+
+                                labelId="demo-simple-select-filled-label"
+                                id="demo-simple-select-filled"
+                                className='search_background text-white'
+
+                            >
+
+                                <MenuItem className='text-white search_background_2 ' value={10}>Ten</MenuItem>
+                                <MenuItem className='text-white search_background_2 ' value={20}>Twenty</MenuItem>
+                                <MenuItem className='text-white search_background_2' value={30}>Thirty</MenuItem>
+                            </Select>
+
+                        </Box>
+
+                    </Grid>
+                    <Grid item xs={1} md={2}>
+                        <Box>  </Box>
+
+                    </Grid>
+                    <Grid item xs={2} md={2}>
+                        <Box sx={{ width: '20ch', height: '45px', border: "2px solid #1a97ef" }} className='rounded-3'> Transfer NFT </Box>
+
+                    </Grid>
+                    <Grid item xs={1} md={2}>
+                        <Box sx={{ width: '15ch', height: '45px', border: "2px solid #1a97ef" }} className='rounded-3'> Mint new </Box>
+
+
+                    </Grid>
+                </Grid>
+
+
+
+
+
+
             </Box>
+
+
+
+
+
+
 
 
         </>
