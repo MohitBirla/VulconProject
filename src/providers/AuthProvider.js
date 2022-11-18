@@ -43,8 +43,9 @@ export const AuthProvider = ({ children }) => {
       'x-api-key': 'A8swpEVPuLYtQR3x1aJK5Df8+WoqRPLwh4xxsq9PQG3O'
     }
   });
-  axios.defaults.headers.post['Content-Type'] = 'application/json';
-
+  axios.defaults.headers = {
+    'Content-Type': 'application/json',
+  }
   const disconnectAcc = () => {
     disconnect();
     setAddress(null);
@@ -58,7 +59,7 @@ export const AuthProvider = ({ children }) => {
 
   const connectWithEmail = async (email) => {
     setLoading(true)
-    instance.post('', JSON.stringify({ user: { email: email } }))
+    instance.post('', { user: { email: email } })
       .then(res => {
         console.log(res)
         setAddress(res.data.wallet.ethAddress);
@@ -69,7 +70,7 @@ export const AuthProvider = ({ children }) => {
       })
   }
 
-  const signMessage = async (email = 'devcoypanda@gmail.com') => {
+  const signMessage = async (email = 'devcodypanda@gmail.com') => {
     let resp = await sdk.signMessage(
       // message
       "Hello World",
