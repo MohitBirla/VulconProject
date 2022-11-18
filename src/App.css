@@ -149,9 +149,52 @@ body{
   padding: 0% 3% 0% 3% !important;
 
 }
+.cardText{
+  width: 148px;
+height: 19px;
 
-/* ///////////////////////////////////////////////////////////////////////// */
+font-family: 'Eurostile LT Pro Unicode';
+font-style: normal;
+font-weight: 400;
+line-height: 19px;
 
+color: #ffffffd3;
+font-size: 14px;
+
+}
+.boXCard{
+  border-radius: 8px;
+  border: 2px solid rgba(6, 205, 253, 1) !important;
+  height: 6.5rem;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.search_background{
+  background-color: rgba(3, 3, 3, 0.3) !important;
+  backdrop-filter: blur(15px) !important;
+  border: 2px solid rgba(163, 163, 163, 1) !important;
+
+}
+.search_background_2{
+  background-color: rgba(3, 3, 3, 0.3) !important;
+
+}
+.displayFlex{
+  display: flex !important;
+  flex-direction: column;
+}
+
+/* //////////////////////////////////  Wallet    /////////////////////////////////////// */
+.wallet_main{
+  padding: 1% !important;
+
+}
+.wallet_first{
+  background: -webkit-linear-gradient(#1F396C,#636ccdca) !important;
+
+}
 
 
 
