@@ -1,4 +1,7 @@
 
+@import url('https://fonts.cdnfonts.com/css/eurostile');
+
+                
 
 * {
   padding: 0;
@@ -7,11 +10,13 @@
 }
 
 
-                
+/* @import url('https://fonts.cdnfonts.com/css/love-nature');                */
 
 body{
-  /* overflow-x: hidden !important; */
+  overflow-x: hidden !important;
   /* font-family: "Eurostile LT Pro Unicode" !important; */
+  /* font-family: 'Love Nature', sans-serif !important; */
+                                                
  
 
 }
@@ -174,12 +179,29 @@ font-size: 14px;
 .search_background{
   background-color: rgba(3, 3, 3, 0.3) !important;
   backdrop-filter: blur(15px) !important;
-  border: 2px solid rgba(163, 163, 163, 1) !important;
+  /* border: 2px solid rgba(163, 163, 163, 1) !important; */
 
 }
 .search_background_2{
   background-color: rgba(3, 3, 3, 0.3) !important;
 
+}
+.search_background_fund{
+
+  background-color: rgba(3, 3, 3, 0.3) !important;
+  width: 100% !important;
+  height: 100% !important;
+  justify-content: center !important;
+  text-align: center !important;
+  /* margin-top: 5% !important; */
+  /* background-color: rgba(0, 0, 0, 0.3) !important; */
+
+
+}
+
+
+::placeholder{
+  color: rgba(161, 161, 161, 1) !important;
 }
 .displayFlex{
   display: flex !important;
@@ -195,6 +217,33 @@ font-size: 14px;
   background: -webkit-linear-gradient(#1F396C,#636ccdca) !important;
 
 }
+.walletCard{
+  backdrop-filter: blur(15px);
+  padding-top: 4%;
+  padding-bottom: 2%;
+ background: rgba(39, 25, 25, 0.3) !important;
+  /* border-bottom: 2px solid red !important; */
+  border: 1px solid rgba(6, 205, 253, 1) !important;
+
+  
+}
+.divide{
+  background-color: rgba(141, 141, 141, 1) !important;
+  margin-top: 2%;
+}
+.cardInput{
+  border: 1px solid rgba(141, 141, 141, 1) ;
+  border-radius: 20px;
+}
+.withdrawBtn{
+  border: 1px solid rgba(6, 205, 253, 1) !important;
+  border-radius: 10px !important;
+  color: white !important;
+  width: 100%;
+  padding: 7% !important;
+}
+
+
 
 
 
@@ -203,12 +252,23 @@ font-size: 14px;
   /* background: none !important; */
   
 }
-.card-title{
-  /* font-family: 'Beatrix Antiqua' !important; */
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 29px;
+.all_main{
+  background: -webkit-linear-gradient(#1F396C,#c0369b94) !important;
+  border: 2px solid rgba(6, 205, 253, 1) !important;
+
+}
+.selectBtn{
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  width: 100%;
+}
+.card-title1{
+  font-family: 'Eurostile', sans-serif !important;
+  letter-spacing: 1px !important;
+
+  }
+  .card-title2{
+  font-family: 'Eurostile', sans-serif !important;
+  letter-spacing: 1px !important;
   }
   .all_events_box {
     border-bottom: 2px dashed #f26000;
@@ -217,10 +277,8 @@ font-size: 14px;
 .nav-pills .show>.button {
   /* background: linear-gradient(180deg, #F59E00 0%, #9F4A00 87.5%); */
   background: linear-gradient(180deg, rgba(18, 157, 222, 1), rgba(21, 43, 110, 1));
-
   border-radius: 5px;
   border: none !important;
-
   border-bottom: 3px solid;
 }
 
@@ -252,6 +310,41 @@ font-size: 14px;
   /* border: 2px solid none !important; */
   margin-top: 10px !;
 }
+
+/* //////////////////////////// fund card guru ///////////////////////// */
+.tabs_events2.nav-pills .linked{
+  /* padding: 10px 35px; */
+  transition: ease 0.5s;
+  text-align: center;
+
+  /* font-family: 'Beatrix Antiqua'; */
+  color: white;
+  width: 100%;
+  /* border-radius: 5px; */
+  /* border-bottom: 2px solid rgba(6, 205, 253, 1) !important; */
+  /* padding: 0% !important; */
+  /* background-color:transparent; */
+}
+
+.tabs_events2.nav-pills .linked .active,
+.nav-pills .show>.linked {
+  justify-items: center;
+  text-align: center;
+  /* background: linear-gradient(180deg, #F59E00 0%, #9F4A00 87.5%); */
+  /* background: linear-gradient(180deg, rgba(18, 157, 222, 1), rgba(21, 43, 110, 1)) !important; */
+  border-bottom: 2px solid rgba(6, 205, 253, 1) ;
+  /* border-radius: 5px; */
+  /* border: none !important; */
+}
+
+.tabs_events2.nav-pills .linked:hover{
+  border-bottom: 2px solid rgba(6, 205, 253, 1) ;
+  
+
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////// */
 .tabs_events.nav-pills button:hover{
   background: linear-gradient(180deg, rgba(18, 157, 222, 1), rgba(21, 43, 110, 1));
 border-radius: 5px;
@@ -268,8 +361,9 @@ border-radius: 5px;
 }
 .swap_history{
   background: linear-gradient(180deg, rgba(18, 157, 222, 1), rgba(21, 43, 110, 1));
-  padding: 1% 2% 1% 2%;
-
+  padding: 1% 0% 1% 2%;
+  width: 100%;
+  margin: 0 !important;
 }
 .OrangeText {
   color: #f26000;
