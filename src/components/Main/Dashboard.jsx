@@ -39,12 +39,12 @@ export default function Dashboard() {
           <Box>
             <center className="pt-4 pb-4">
               <h4 className=" fw-bold text-white" style={{ fontFamily: "Beatrix Antiqua",fontSize:'25px' }} >CODYPANDA</h4>
-              <Avatar
-                className='mt-4'
-                alt="Remy Sharp"
-                src="/images/user_photo.jpeg"
-                sx={{ width: "70%", height: "70%" }}
-              />
+                <Avatar
+                  className='mt-4'
+                  alt="Remy Sharp"
+                  src="/images/user_photo.jpeg"
+                  sx={{ width: "70%", height: "70%" }}
+                />
              
             </center>
             <Box className=" nav nav-pills tabs_events1 d-inline" id="pills-tab">

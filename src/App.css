@@ -498,7 +498,19 @@ input[type=number] {
 
 
 
+/* === shivam */
 
+.borderNft{
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 2px solid rgba(6, 205, 253, 1) !important;
+
+  width: 50px;
+  height: 50px;
+}
 
 
 
