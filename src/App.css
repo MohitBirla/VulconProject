@@ -514,8 +514,32 @@ input[type=number] {
 
 
 
-/* ////////////////////////////      Profile    ////////////////////////////////////////// */
+/* ////////////////////////////   nft    ////////////////////////////////////////// */
   
 
+.tabs_Nft.nav-pills .linked .active,
+.nav-pills .show>.linke{
+  color: red;
+  /* cursor: pointer; */
+}
+.AllNft{
+  border-radius: 20%;
+  -webkit-border-radius: 20%;
+  -moz-border-radius: 20%;
+  -ms-border-radius: 20%;
+  -o-border-radius: 20%;
+  border: 2px solid rgba(6, 205, 253, 1) !important;
+  width: 40px;
+  height: 40px;
+}
 
-
+.Nftbox{
+  border-radius: 10px;
+  border: 2px solid rgba(6, 205, 253, 1) !important;
+  
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  background: linear-gradient(94.2deg, #129DDE -4.04%, #152B6E 117.42%);
+}
