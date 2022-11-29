@@ -193,7 +193,7 @@ export default function MyFunds() {
               </Box>
 
               <Box>
-                {/* <DataTable/> */}
+                <DataTable/> 
               </Box>
             </Box>
 
