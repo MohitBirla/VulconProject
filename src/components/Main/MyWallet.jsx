@@ -529,13 +529,13 @@ export default function MyWallet() {
                             </Box>
                         </Box>
                         <Box className='row mt-5 swap_history'>
-                            <Box className='col-5' sx={{ mt: 2 }}>
+                            <Box className='col-lg-5 col-12' sx={{ mt: 2 }}>
                                 <Typography className='card-title1' variant="h1" style={{ fontSize: '24px', fontWeight: 'bold' }} >WITHDRAWAL
                                     <Typography className='d-inline card-title2' variant="h1" style={{ fontSize: '24px', fontWeight: 'bold', color: "rgba(6, 205, 253, 1)" }} > HISTORY </Typography></Typography>
                                 {/* <Typography variant='h1' sx={{mt:1,fontSize:'24px'}}  class="card-title1">Swapping  </Typography>
                                 <Typography  variant='h1' sx={{mt:1,fontSize:'24px'}} className='card-title2'>History</Typography> */}
                             </Box>
-                            <Box className='col-4 align-items-end justify-content-end'>
+                            <Box className='col-lg-4 col-12 xs-mt-2 align-items-end justify-content-end'>
                                 {/* <TextField type="text" class="form-control  rounded-1 text-white" name="Payment.TwoFactorCode" placeholder="Search" /> */}
                                 <TextField
                                     // id="outlined-start-adornment"
@@ -548,7 +548,7 @@ export default function MyWallet() {
                                     }}
                                 />
                             </Box>
-                            <Box className='col-3'>
+                            <Box className='col-lg-3 col-12'>
                                 <FormControl className='bg-none selectBtn' sx={{ m: 0, }}>
                                     <Select
                                         value={age}
@@ -567,7 +567,7 @@ export default function MyWallet() {
                             </Box>
                         </Box>
                         <Box>
-                                <DataTable/>
+                                {/* <DataTable/> */}
                         </Box>
                     </Box>
                     <Box
