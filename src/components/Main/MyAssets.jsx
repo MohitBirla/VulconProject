@@ -410,19 +410,14 @@ export default function MyAssets() {
                             role="tabpanel"
                             aria-labelledby="pills-land-tab"
                         >
-                            <Box
-                                className="tab-pane fade show active"
-                                id="pills-land"
-                                role="tabpanel"
-                                aria-labelledby="pills-land-tab"
-                            >
+                           
                                 <Box className="gallery_main_container justify-content-center d-flex flex-wrap">
 
                                     <h1 className='text-white'>LAND</h1>
 
 
                                 </Box>
-                            </Box>
+                            
                         </Box>
                         {/* == */}
                         <Box

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Avatar from "@mui/material/Avatar";
 import {
   Box,
+  Button,
+  Divider,
   Grid,
   InputAdornment,
   InputLabel,
@@ -15,6 +17,9 @@ import SearchIcon from "@mui/icons-material/Search";
 import { FormControl } from "react-bootstrap";
 
 export default function Nft() {
+  
+  const [nftBoxs , setNftBoxs]=useState([1,2,3,4,5,6,7,8])
+
   return (
     <>
       <Box className="blur_color  ">
@@ -161,176 +166,333 @@ export default function Nft() {
         </Box>
 
 
-        <Grid item xs={12} md={6}>
-                            <Box className="events_list_tablist gallery_list ">
-                                <Box className=''>
-                                    <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-                                        className="nav nav-pills  tabs_events2 gallery_image_list"
-                                        id="pills-tab"
-                                        role="tablist"
-                                    >
-                                        <Grid item xs={8} md={8}></Grid>
-                                        <Grid item xs={1} md={1} className="nav-item linked" role="presentation">
-                                            <Typography
-                                                className="active"
-                                                id="pills-home-tab"
-                                                data-bs-toggle="pill"
-                                                data-bs-target="#pills-home1"
-                                                type="text"
-                                                // role="tab"
-                                                aria-controls="pills-home"
-                                                aria-selected="true"
-
-                                            >
-                                                All
-                                            </Typography>
-                                        </Grid>
-                                        <Grid item xs={1} md={1} className="nav-item linked" role="presentation">
-                                            <Typography
-                                                // className="ms-3"
-
-                                                id="pills-profile-tab"
-                                                data-bs-toggle="pill"
-                                                data-bs-target="#pills-profile1"
-                                                type="text"
-                                                role="tab"
-                                                aria-controls="pills-profile"
-                                                aria-selected="false"
-                                            >
-                                                Categary 01
-                                            </Typography>
-                                        </Grid>
-                                        <Grid item xs={1} md={1} className="nav-item linked" role="presentation">
-                                            <Typography
-                                                // className="ms-3"
-
-                                                id="pills-wp-tab"
-                                                data-bs-toggle="pill"
-                                                data-bs-target="#pills-wp1"
-                                                role="tab"
-                                                type="text"
-                                                aria-controls="pills-wp"
-                                                aria-selected="false"
+        
+          <Box className="events_list_tablist gallery_list ">
+            <Box className=''>
+              <Box container  
+                className="nav nav-pills  tabs_Nft gallery_image_list"
+                id="pills-tab"
+                role="tablist"
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'flex-end',
+                  p: 1,
+                  m: 1,
+                  
+                  borderRadius: 1,
+                }}
+              >
+                <Box item  className="nav-item linked" role="presentation">
 
 
-                                            >
-                                            Categary 02
+                  <Typography
+                    className="active mx-1"
+                    id="pills-All-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-All"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-All"
+                    aria-selected="false"
+                  >
+                    All
 
-                                            </Typography>
-                                        </Grid>
-                                        <Grid item xs={1} md={1} className="nav-item linked" role="presentation">
-                                            <Typography
-                                                // className="ms-3"
+                  </Typography>
 
-                                                id="pills-wp-tab"
-                                                data-bs-toggle="pill"
-                                                data-bs-target="#pills-wp1"
-                                                role="tab"
-                                                type="text"
-                                                aria-controls="pills-wp"
-                                                aria-selected="false"
+                </Box>
+                <Box item className="nav-item linked" role="presentation">
+                  <Typography
+                    // className="ms-3"
+                    sx={{mx:1}}
+                    id="pills-CategaryOne-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-CategaryOne"
+                    type="text"
+                    role="tab"
+                    aria-controls="pills-CategaryOne"
+                    aria-selected="false"
+                  >
+                    Categary 01
+                  </Typography>
+                </Box>
+                <Box item className="nav-item linked" role="presentation">
+                  <Typography
+                    // className="ms-3"
+                    sx={{mx:1}}
+
+                    id="pills-CategaryTwo-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-CategaryTwo"
+                    role="tab"
+                    type="text"
+                    aria-controls="pills-CategaryTwo"
+                    aria-selected="false"
 
 
-                                            >
-                                                                                               Categary 03
+                  >
+                    Categary 02
 
-                                            </Typography>
-                                        </Grid>
+                  </Typography>
+                </Box>
+                <Box className="nav-item linked" role="presentation">
+                  <Typography
+                    // className="ms-3"
+                    sx={{mx:1}}
 
-                                    </Grid>
-                                </Box>
-                            </Box>
+                    id="pills-CategaryThree-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-CategaryThree"
+                    role="tab"
+                    type="text"
+                    aria-controls="pills-CategaryThree"
+                    aria-selected="false"
 
 
+                  >
+                    Categary 03
 
-                        </Grid>
+                  </Typography>
+                </Box>
+
+              
+            </Box>
+          </Box>
+          </Box>
 
 
+          <Box className='bg-white mt-4' style={{ width: '100%', height: '1px' }} ></Box>
 
-        {/* <Grid container spacing={2}>
-          <Grid item xs={3} md={3}>
-            <Box>
+
+    
+
+
+        <Box className="tab-content" id="pills-tabContent">
+          <Box
+            className="tab-pane fade show active mt-3"
+            id="pills-All"
+            role="tabpanel"
+            aria-labelledby="pills-All-tab"
+          >
+          
+
+{/* == new grid */}
+<Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+          <Grid item xs={6} sm={5} md={3 }>
+            <Box className='align-items-end justify-content-end' sx={{mx:2}}>
+              {/* <TextField type="text" class="form-control  rounded-1 text-white" name="Payment.TwoFactorCode" placeholder="Search" /> */}
               <TextField
                 // id="outlined-start-adornment"
-                sx={{
-                  m: 1,
-                  width: "25ch",
-                  height: "45px",
-                  "& fieldset": { border: "none" },
-                }}
-                placeholder="search..."
-                className="rounded-4 search_background "
+                sx={{ border: 'none' }}
+                placeholder='search...'
+                className=' search_background_fund rounded-3'
+
                 InputProps={{
-                  startAdornment: (
-                    <InputAdornment position="start">
-                      <SearchIcon />
-                    </InputAdornment>
-                  ),
+                  startAdornment: <InputAdornment position="start" sx={{ color: 'white' }} ><SearchIcon /></InputAdornment>,
                 }}
               />
             </Box>
+
           </Grid>
-          <Grid item xs={2} md={3}>
-            <Box>
-              <Select
-                sx={{
-                  m: 1,
-                  width: "20ch",
-                  height: "45px",
-                  "& fieldset": { border: "none" },
-                }}
-                labelId="demo-simple-select-filled-label"
-                id="demo-simple-select-filled"
-                className="search_background text-white"
-              >
-                <MenuItem
-                  className="text-white search_background_2 "
-                  value={10}
-                >
-                  Ten
-                </MenuItem>
-                <MenuItem
-                  className="text-white search_background_2 "
-                  value={20}
-                >
-                  Twenty
-                </MenuItem>
-                <MenuItem className="text-white search_background_2" value={30}>
-                  Thirty
-                </MenuItem>
-              </Select>
+          <Grid item xs={6} md={3}>
+            <Typography>shiv 1</Typography>
+
+          </Grid>
+          <Grid item xs={1}>
+          <Box className="AllNft" sx={{ mt: 2, px: 1 }}>  
+         
+          <Avatar
+                        className="mt-2"
+                        alt="Remy Sharp"
+                        src="/images/tables.svg"
+                        sx={{ width: "90%", height: "60%" }}
+                      />
+          </Box>
+
+          </Grid>
+          <Grid item xs={12} md={5}>
+
+          <Box className="events_list_tablist gallery_list mt-4">
+                <Box className='justify-content-center'>
+                  <Box container rowSpacing={1} columnSpacing={{ }}
+                    className="nav nav-pills  tabs_events gallery_image_list"
+                    id="pills-tab"
+                    role="tablist"
+                  >
+          <Grid item  xs={5} md={5} sx={{mx:3}}>
+
+                    <Typography item  className="nav-item" role="presentation">
+                      <Button
+                        className="active"
+                        id="pills-Transfer-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-Transfer"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-Transfer"
+                        aria-selected="true"
+
+
+                      >
+                        Transfer NFT
+                      </Button>
+                    </Typography>
+          </Grid>
+          <Grid item xs={5} md={5}>
+
+                    <Typography className="nav-item" role="presentation">
+                      <Button
+                        // className="ms-3"
+                        id="pills-Mint-tab"
+                        data-bs-toggle="pill"
+                        data-bs-target="#pills-Mint"
+                        type="button"
+                        role="tab"
+                        aria-controls="pills-Mint"
+                        aria-selected="false"
+                      >
+                        Mint New
+                      </Button>
+                    </Typography>
+                    </Grid>
+
+
+
+                  </Box>
+                </Box>
+              </Box>
+        
+              </Grid>
+         
+        </Grid>
+
+{/* == */}
+<Grid container spacing={3}>
+    {nftBoxs.map((dt)=>( <Grid item xs={6} md={3}>
+ <Box className="Nftbox" sx={{mx:3,mt:4,height:290, maxHeight: { xs: 200,md:300}, }} >
+ <Box variant='div' sx={{mx:2}} >
+ <Box
+        component="img"
+        sx={{ justifyContent: 'flex-end' }}
+        
+        alt="The house from the offer."
+        src="/images/threeDoi.svg"
+        
+
+      /> 
+<Box
+      component="img"
+      sx={{
+      }}
+      alt="The house from the offer."
+      src="/images/threeDoi.svg"
+      
+
+    /> 
+    <Box
+      component="img"
+      sx={{
+      }}
+      alt="The house from the offer."
+      src="/images/threeDoi.svg"
+      
+
+    /> 
+</Box>
+ <Box
+        component="img"
+        sx={{
+          height: 233,
+          // width: 350,
+          justifyContent: 'center', 
+          mx:1,
+          mt:2,
+         
+          maxHeight: { xs: 150, md: 233 },
+          // maxWidth: { xs: 350, md: 250 },
+        }}
+        alt="The house from the offer."
+        src="/images/frontCard.svg"
+      /> 
+ </Box>
+  </Grid> 
+))}
+  {/* <Grid item xs={6} md={3}>
+    <Typography>xs=6</Typography>
+  </Grid>
+  <Grid item xs={6} md={3}>
+    <Typography>xs</Typography>
+  </Grid>
+  <Grid item xs={6} md={3}>
+    <Typography>xs</Typography>
+  </Grid> */}
+</Grid>
+        
+{/* == */}
+
+          </Box>
+
+          {/* Transfer NFT */}
+          <Box className="tab-pane fade "
+            id="pills-Transfer"
+            role="tabpanel"
+            aria-labelledby="pills-Transfer-tab"
+          >
+            <Box className="">
+              <Typography variant="h1" className='text-white'>Transfer 1 lo</Typography>
             </Box>
-          </Grid>
-          <Grid item xs={1} md={2}>
-            <Box> </Box>
-          </Grid>
-          <Grid item xs={2} md={2}>
-            <Box
-              sx={{
-                width: "20ch",
-                height: "45px",
-                border: "2px solid #1a97ef",
-              }}
-              className="rounded-3"
-            >
-              {" "}
-              Transfer NFT{" "}
+          </Box>
+          {/* Mint New */}
+          <Box className="tab-pane fade"
+            id="pills-Mint"
+            role="tabpanel"
+            aria-labelledby="pills-Mint-tab"
+          >
+            <Box className="">
+              <Typography variant="h1" className='text-white'>Mint 1 lo</Typography>
             </Box>
-          </Grid>
-          <Grid item xs={1} md={2}>
-            <Box
-              sx={{
-                width: "15ch",
-                height: "45px",
-                border: "2px solid #1a97ef",
-              }}
-              className="rounded-3"
-            >
-              {" "}
-              Mint new{" "}
+          </Box>
+
+          {/* == categery 1 */}
+          <Box className="tab-pane fade active"
+            id="pills-CategaryOne"
+            role="tabpanel"
+            aria-labelledby="pills-CategaryOne-tab"
+          >
+            <Box className="">
+              <Typography variant="h1" className='text-white'>Categary 1 lo</Typography>
             </Box>
-          </Grid>
-        </Grid> */}
+          </Box>
+
+          {/* == categery 2 */}
+          <Box className="tab-pane fade active"
+            id="pills-CategaryTwo"
+            role="tabpanel"
+            aria-labelledby="pills-CategaryTwo-tab"
+          >
+            <Box className="">
+              <Typography variant="h1" className='text-white'>Categary 2</Typography>
+            </Box>
+          </Box>
+
+          {/* == categery 3 */}
+          <Box className="tab-pane fade active"
+            id="pills-CategaryThree"
+            role="tabpanel"
+            aria-labelledby="pills-CategaryThree-tab"
+          >
+            <Box className="">
+              <Typography variant="h1" className='text-white'>Categary 3</Typography>
+            </Box>
+          </Box>
+
+
+        </Box>
+
+
+       
+
+
+     
       </Box>
     </>
   );
