@@ -128,7 +128,7 @@ export default function MyFunds() {
                               <Typography variant="h4" style={{ fontFamily: 'Beatrix Antiqua' }} class="mb-0 mt-2 text-white">Marketing Wallet</Typography>
                             </Box>
                             <FormControl class="row flex-grow-1 gx-1">
-                              <Box class="col-6 position-relative mb-2 mb-sm-0">
+                              <Box class="col-lg-6 col-8 position-relative mb-2 mb-sm-0">
                                 {/* <input type="number" outline="none" id="FromMainPYR" min="1" class=" form-control shadow-none h-pxl-48 rounded-1 text-white" placeholder="Enter Amount of MATIC" /> */}
                                 <TextField
                                   // id="outlined-start-adornment"
@@ -142,7 +142,7 @@ export default function MyFunds() {
                                 />
                                 <Typography variant="h6" id="MainMax" type="button" class="p-0 OrangeText shadow-none  bg-transparent border-0 position-absolute end-0 top-0  mt-3 F-size-20 bottom-0 me-3  "> Max </Typography>
                               </Box>
-                              <Box class="col-6">
+                              <Box class="col-lg-6 col-4">
                                 <Button type="button" id="ConvertMainToMarket" class="BtnBorder py-2 px-2 bg-transparent border-0 " >Transfer</Button>
                               </Box>
                             </FormControl>
@@ -152,13 +152,13 @@ export default function MyFunds() {
                     </Box>
                   </Box>
                   <Box className='row mt-5 swap_history'>
-                    <Box className='col-5' sx={{ mt: 2 }}>
+                    <Box className='col-lg-5 col-12' sx={{ mt: 2 }}>
                       <Typography className='card-title1' variant="h1" style={{ fontSize: '24px', fontWeight: 'bold' }} >SWAPPING
                         <Typography className='d-inline card-title2' variant="h1" style={{ fontSize: '24px', fontWeight: 'bold', color: "rgba(6, 205, 253, 1)" }} > HISTORY </Typography></Typography>
                       {/* <Typography variant='h1' sx={{mt:1,fontSize:'24px'}}  class="card-title1">Swapping  </Typography>
                       <Typography  variant='h1' sx={{mt:1,fontSize:'24px'}} className='card-title2'>History</Typography> */}
                     </Box>
-                    <Box className='col-4 align-items-end justify-content-end'>
+                    <Box className='col-lg-4 col-12'>
                       {/* <TextField type="text" class="form-control  rounded-1 text-white" name="Payment.TwoFactorCode" placeholder="Search" /> */}
                       <TextField
                         // id="outlined-start-adornment"
@@ -171,7 +171,7 @@ export default function MyFunds() {
                         }}
                       />
                     </Box>
-                    <Box className='col-3'>
+                    <Box className='col-lg-3 col-12'>
                       <FormControl className='bg-none selectBtn' sx={{ m: 0, }}>
                         <Select
                           value={age}
@@ -193,7 +193,7 @@ export default function MyFunds() {
               </Box>
 
               <Box>
-                <DataTable/>
+                {/* <DataTable/> */}
               </Box>
             </Box>
 
