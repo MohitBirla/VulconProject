@@ -567,7 +567,7 @@ export default function MyWallet() {
                             </Box>
                         </Box>
                         <Box>
-                                {/* <DataTable/> */}
+                                <DataTable/> 
                         </Box>
                     </Box>
                     <Box
