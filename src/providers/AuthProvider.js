@@ -26,7 +26,8 @@ export const AuthContext = createContext({
   connect: () => null,
   disconnectAcc: () => null,
   setBalance: () => null,
-  signMessage: () => null
+  signMessage: () => null,
+  mintNFT: () => null
 });
 
 
@@ -36,6 +37,7 @@ export const AuthProvider = ({ children }) => {
   const [balance, setBalance] = useState(null);
   const [loading, setLoading] = useState(false);
   const [chainId, setChainId] = useState(null);
+  const [nftResponse, setNftResponse] = useState(null)
   const disconnect = useDisconnect()
   const instance = axios.create({
     baseURL: 'https://metabackend.onrender.com',
@@ -60,7 +62,6 @@ export const AuthProvider = ({ children }) => {
   }
 
   const connectWithEmail = async (email) => {
-    setLoading(true)
     instance.post('/login', { email: email })
       .then(res => {
         console.log(res)
@@ -73,7 +74,6 @@ export const AuthProvider = ({ children }) => {
   }
 
   const getBalance = async () => {
-    setLoading(true)
     if (address) {
       instance.post('/getbalance', { address: address })
         .then(res => {
@@ -85,6 +85,27 @@ export const AuthProvider = ({ children }) => {
     } else {
       return 0
     }
+
+  }
+
+  const mintNFT = async () => {
+
+    if (address) {
+      setLoading(true)
+      instance.post('/mintnft', { address: address })
+        .then(res => {
+          //setBalance(res.data)
+          console.log(res)
+          setNftResponse(res.data)
+          setLoading(false)
+        })
+        .catch(err => {
+          console.log(err)
+          setLoading(false)
+        })
+    }
+
+
 
   }
 
@@ -109,7 +130,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ address, chainId, setAddress, connectWithEmail, loading, connect, disconnectAcc, signMessage, balance, getBalance }}
+      value={{ address, chainId, setAddress, connectWithEmail, loading, connect, disconnectAcc, signMessage, balance, getBalance, mintNFT, nftResponse }}
     >
       {children}
     </AuthContext.Provider>

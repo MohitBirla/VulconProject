@@ -15,11 +15,16 @@ import {
 } from "@mui/material";
 
 import SearchIcon from "@mui/icons-material/Search";
+import MintNFTModal from "../Modals/MintNFTModal";
+import Modal from 'react-bootstrap/Modal';
 
 export default function Nft() {
 
   const [nftBoxs, setNftBoxs] = useState([1, 2, 3, 4, 5, 6, 7, 8])
   const [age, setAge] = React.useState('');
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
 
   const handleChange = (event) => {
     setAge(event.target.value);
@@ -362,7 +367,7 @@ export default function Nft() {
                             aria-controls="pills-Mint"
                             aria-selected="false"
                             sx={{ height: 55, mb: 2 }}
-
+                            onClick={() => { setShow(true) }}
                           >
                             Mint New
                           </Button>
@@ -500,6 +505,7 @@ export default function Nft() {
 
 
       </Box>
+      <Modal show={show} onHide={handleClose}><MintNFTModal handleClose={() => handleClose()} /></Modal>
     </>
   );
 }
