@@ -30,7 +30,7 @@ import { useAuthContext } from '../../providers/AuthProvider';
 export default function MyFunds() {
 
   const [age, setAge] = React.useState('');
-  const { connectWithEmail, address, connect, getBalance, balance } = useAuthContext()
+  const { connectWithEmail, address, connect, getBalance, balance, listNFTs } = useAuthContext()
 
   const handleChange = (event) => {
     setAge(event.target.value);
@@ -40,7 +40,6 @@ export default function MyFunds() {
     getBalance().then(bal => {
       console.log(bal)
     })
-
     return () => {
 
     }

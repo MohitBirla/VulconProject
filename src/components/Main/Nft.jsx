@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Avatar from "@mui/material/Avatar";
 import {
   Box,
@@ -17,18 +17,29 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 import MintNFTModal from "../Modals/MintNFTModal";
 import Modal from 'react-bootstrap/Modal';
+import { useAuthContext } from "../../providers/AuthProvider";
 
 export default function Nft() {
 
   const [nftBoxs, setNftBoxs] = useState([1, 2, 3, 4, 5, 6, 7, 8])
   const [age, setAge] = React.useState('');
   const [show, setShow] = useState(false);
+  const { connectWithEmail, address, connect, getBalance, balance, listNFTs, nftList } = useAuthContext()
 
   const handleClose = () => setShow(false);
 
   const handleChange = (event) => {
     setAge(event.target.value);
   };
+
+  useEffect(() => {
+    listNFTs().then(r => {
+      console.log(r)
+    })
+    return () => {
+
+    }
+  }, [address])
 
   return (
     <>
@@ -386,30 +397,9 @@ export default function Nft() {
 
             {/* == */}
             <Grid container spacing={3}>
-              {nftBoxs.map((dt) => (<Grid item xs={6} md={3}>
+              {nftList?.tokens.map((dt) => (<Grid item xs={6} md={3}>
                 <Box className="Nftbox" sx={{ mx: 2, mt: 4, height: 290, maxHeight: { xs: 200, md: 300 }, }} >
                   <Box variant='div' sx={{ mx: 2 }} >
-                    <Box
-                      component="img"
-                      sx={{ justifyContent: 'flex-end' }}
-
-                      alt="The house from the offer."
-                      src="/images/threeDoi.svg"
-                    />
-                    <Box
-                      component="img"
-                      sx={{
-                      }}
-                      alt="The house from the offer."
-                      src="/images/threeDoi.svg"
-                    />
-                    <Box
-                      component="img"
-                      sx={{
-                      }}
-                      alt="The house from the offer."
-                      src="/images/threeDoi.svg"
-                    />
                   </Box>
                   <Box
                     component="img"
@@ -424,7 +414,7 @@ export default function Nft() {
                       // maxWidth: { xs: 350, md: 250 },
                     }}
                     alt="The house from the offer."
-                    src="/images/frontCard.svg"
+                    src={dt.tokenMetadata.image}
                   />
                 </Box>
               </Grid>

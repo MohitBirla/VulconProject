@@ -37,7 +37,8 @@ export const AuthProvider = ({ children }) => {
   const [balance, setBalance] = useState(null);
   const [loading, setLoading] = useState(false);
   const [chainId, setChainId] = useState(null);
-  const [nftResponse, setNftResponse] = useState(null)
+  const [nftResponse, setNftResponse] = useState(null);
+  const [nftList, setNftList] = useState(null)
   const disconnect = useDisconnect()
   const instance = axios.create({
     baseURL: 'https://metabackend.onrender.com',
@@ -109,6 +110,24 @@ export const AuthProvider = ({ children }) => {
 
   }
 
+  const listNFTs = async () => {
+
+    if (address) {
+      setLoading(true)
+      instance.post('/listtokens', { address: address })
+        .then(res => {
+          //setBalance(res.data)
+          console.log(res)
+          setNftList(res.data)
+          setLoading(false)
+        })
+        .catch(err => {
+          console.log(err)
+          setLoading(false)
+        })
+    }
+  }
+
   const signMessage = async (email = 'devcodypanda@gmail.com') => {
     let resp = await sdk.signMessage(
       // message
@@ -130,7 +149,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ address, chainId, setAddress, connectWithEmail, loading, connect, disconnectAcc, signMessage, balance, getBalance, mintNFT, nftResponse }}
+      value={{ address, chainId, setAddress, connectWithEmail, loading, connect, disconnectAcc, signMessage, balance, getBalance, mintNFT, nftResponse, listNFTs, nftList }}
     >
       {children}
     </AuthContext.Provider>
