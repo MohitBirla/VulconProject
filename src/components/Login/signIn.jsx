@@ -48,47 +48,51 @@ export default function SignIn() {
     }
     // eslint-disable-next-line
   }, [address]);
+
+  const getBalance = (account) => {
+
+  }
   return (
     <Box className='main_login'>
       <Box className='main_1'>
-      <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <Grid item xs={12} md={4}>
-          <Box className='main-2'>
-            <Box className='innerLogin'>
-              <Typography variant="h1" style={{ fontSize: '45px', fontWeight: 'bold', color: "#06CDFD" }}>SIGN <Typography className='d-inline' variant="h1" style={{ fontSize: '45px', fontWeight: 'bold', color:"white" }}>IN</Typography></Typography>
-              <Typography variant="p" className='d-block text-white mt-3' >Login to your account</Typography>
-              <Button type='button' variant="contained" onClick={() => signMessage()} startIcon={<EmailIcon />} className='login_btn mt-4'>LOGIN WITH EMAIL</Button>
+        <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+          <Grid item xs={12} md={4}>
+            <Box className='main-2'>
+              <Box className='innerLogin'>
+                <Typography variant="h1" style={{ fontSize: '45px', fontWeight: 'bold', color: "#06CDFD" }}>SIGN <Typography className='d-inline' variant="h1" style={{ fontSize: '45px', fontWeight: 'bold', color: "white" }}>IN</Typography></Typography>
+                <Typography variant="p" className='d-block text-white mt-3' >Login to your account</Typography>
+                <Button type='button' variant="contained" onClick={() => signMessage()} startIcon={<EmailIcon />} className='login_btn mt-4'>LOGIN WITH EMAIL</Button>
 
-              <Typography variant="p" className='d-block fs-5 fw-bold mt-3 text-white' style={{}}>OR</Typography>
-              {account.isConnected ? <Typography variant="h1">
-                <Box className='fw-bold'>
-                  {account.address.slice(0, 5)}
+                <Typography variant="p" className='d-block fs-5 fw-bold mt-3 text-white' style={{}}>OR</Typography>
+                {account.isConnected ? <Typography variant="h1">
+                  <Box className='fw-bold'>
+                    {account.address.slice(0, 5)}
 
-                </Box>
-              </Typography> :
-                <Box className=' fw-bold  mt-2'>
-                  <Button type='button' variant="contained" startIcon={<WalletIcon />} className='login_btn' onClick={() => open()}>CONNECT WALLET</Button>
+                  </Box>
+                </Typography> :
+                  <Box className=' fw-bold  mt-2'>
+                    <Button type='button' variant="contained" startIcon={<WalletIcon />} className='login_btn' onClick={() => open()}>CONNECT WALLET</Button>
 
-                </Box>
+                  </Box>
 
-              }
-            <img src='./images/metaLogo.png' style={{width:"180px" , height:"50px"}} className='mt-4'></img>
+                }
+                <img src='./images/metaLogo.png' style={{ width: "180px", height: "50px" }} className='mt-4'></img>
+              </Box>
             </Box>
-          </Box>
+          </Grid>
+          <Grid item xs={0} md={8}>
+            <Box className='text-center'>
+              <Typography className='wellCome text-center fw-bold' variant="h1">WELCOME</Typography>
+              <Typography className='wellCome2' variant="p" >TO WORLD@META</Typography>
+
+            </Box>
+
+
+          </Grid>
+
         </Grid>
-        <Grid item xs={0} md={8}>
-          <Box className='text-center'>
-          <Typography className='wellCome text-center fw-bold' variant="h1">WELCOME</Typography>
-          <Typography className='wellCome2' variant="p" >TO WORLD@META</Typography>
-
-          </Box>
-          
-
-        </Grid>
-
-      </Grid>
       </Box>
-     
+
 
       <Web3Modal config={config} />
       <Modal show={show} onHide={handleClose}><LoginModal handleClose={() => handleClose()} /></Modal>

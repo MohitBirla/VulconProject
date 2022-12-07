@@ -21,9 +21,11 @@ export const AuthContext = createContext({
   address: null,
   loading: false,
   chainId: null,
+  balance: null,
   connectWithEmail: () => null,
   connect: () => null,
   disconnectAcc: () => null,
+  setBalance: () => null,
   signMessage: () => null
 });
 
@@ -31,16 +33,16 @@ export const AuthContext = createContext({
 
 export const AuthProvider = ({ children }) => {
   const [address, setAddress] = useState(null);
+  const [balance, setBalance] = useState(null);
   const [loading, setLoading] = useState(false);
   const [chainId, setChainId] = useState(null);
   const disconnect = useDisconnect()
   const instance = axios.create({
-    baseURL: 'https://api.metakeep.xyz/v3/getWallet',
+    baseURL: 'https://metabackend.onrender.com',
     timeout: 5000,
     headers: {
       accept: 'application/json',
-      'content-type': 'application/json',
-      'x-api-key': 'A8swpEVPuLYtQR3x1aJK5Df8+WoqRPLwh4xxsq9PQG3O'
+      'Content-Type': 'application/json',
     }
   });
   axios.defaults.headers = {
@@ -59,7 +61,7 @@ export const AuthProvider = ({ children }) => {
 
   const connectWithEmail = async (email) => {
     setLoading(true)
-    instance.post('', { user: { email: email } })
+    instance.post('/login', { email: email })
       .then(res => {
         console.log(res)
         setAddress(res.data.wallet.ethAddress);
@@ -68,6 +70,22 @@ export const AuthProvider = ({ children }) => {
       .catch(err => {
         console.log(err)
       })
+  }
+
+  const getBalance = async () => {
+    setLoading(true)
+    if (address) {
+      instance.post('/getbalance', { address: address })
+        .then(res => {
+          setBalance(res.data)
+        })
+        .catch(err => {
+          console.log(err)
+        })
+    } else {
+      return 0
+    }
+
   }
 
   const signMessage = async (email = 'devcodypanda@gmail.com') => {
@@ -91,7 +109,7 @@ export const AuthProvider = ({ children }) => {
 
   return (
     <AuthContext.Provider
-      value={{ address, chainId, setAddress, connectWithEmail, loading, connect, disconnectAcc, signMessage }}
+      value={{ address, chainId, setAddress, connectWithEmail, loading, connect, disconnectAcc, signMessage, balance, getBalance }}
     >
       {children}
     </AuthContext.Provider>

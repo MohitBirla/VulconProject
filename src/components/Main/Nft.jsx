@@ -66,7 +66,7 @@ export default function Nft() {
                   <Grid item xs={9} className="p-1">
                     <Box>
                       <Typography className="card-title cardText mt-2 mx-3 ">
-                        VulcanMarket <br /> NFTs
+                        Meta <br /> NFTs
                       </Typography>
                       <Typography variant="h5" sx={{ mt: 3 }} className="mx-4">
                         25
@@ -76,7 +76,7 @@ export default function Nft() {
                 </Grid>
               </Box>
             </Grid>
-            <Grid item xs={6} md={3}>
+            {/* <Grid item xs={6} md={3}>
               <Box class="card boXCard nftBox p-2">
                 <Grid
                   container
@@ -166,7 +166,7 @@ export default function Nft() {
                   </Grid>
                 </Grid>
               </Box>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Box>
 
@@ -263,14 +263,7 @@ export default function Nft() {
             </Box>
           </Box>
         </Box>
-
-
         <Box className='bg-white mt-4' style={{ width: '100%', height: '1px' }} ></Box>
-
-
-
-
-
         <Box className="tab-content" id="pills-tabContent">
           <Box
             className="tab-pane fade show active mt-3"
@@ -278,8 +271,6 @@ export default function Nft() {
             role="tabpanel"
             aria-labelledby="pills-All-tab"
           >
-
-
             {/* == new grid */}
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
               <Grid item xs={6} sm={5} md={3}>
@@ -399,8 +390,6 @@ export default function Nft() {
 
                       alt="The house from the offer."
                       src="/images/threeDoi.svg"
-
-
                     />
                     <Box
                       component="img"
@@ -408,8 +397,6 @@ export default function Nft() {
                       }}
                       alt="The house from the offer."
                       src="/images/threeDoi.svg"
-
-
                     />
                     <Box
                       component="img"
@@ -417,8 +404,6 @@ export default function Nft() {
                       }}
                       alt="The house from the offer."
                       src="/images/threeDoi.svg"
-
-
                     />
                   </Box>
                   <Box
@@ -439,35 +424,35 @@ export default function Nft() {
                 </Box>
               </Grid>
               ))}
-             
+
             </Grid>
-        <Box className="tab-content" id="pills-tabContent">
+            <Box className="tab-content" id="pills-tabContent">
 
-            {/* == */}
+              {/* == */}
 
-          </Box>
-
-          {/* Transfer NFT */}
-
-          <Box className="tab-pane fade "
-            id="pills-Transfer"
-            role="tabpanel"
-            aria-labelledby="pills-Transfer-tab"
-          >
-            <Box className="">
-              <Typography variant="h1" className='text-white'>Transfer 1 lo</Typography>
             </Box>
-          </Box>
-          {/* Mint New */}
-          <Box className="tab-pane fade"
-            id="pills-Mint"
-            role="tabpanel"
-            aria-labelledby="pills-Mint-tab"
-          >
-            <Box className="">
-              <Typography variant="h1" className='text-white'>Mint 1 lo</Typography>
+
+            {/* Transfer NFT */}
+
+            <Box className="tab-pane fade "
+              id="pills-Transfer"
+              role="tabpanel"
+              aria-labelledby="pills-Transfer-tab"
+            >
+              <Box className="">
+                <Typography variant="h1" className='text-white'>Transfer 1 lo</Typography>
+              </Box>
             </Box>
-          </Box>
+            {/* Mint New */}
+            <Box className="tab-pane fade"
+              id="pills-Mint"
+              role="tabpanel"
+              aria-labelledby="pills-Mint-tab"
+            >
+              <Box className="">
+                <Typography variant="h1" className='text-white'>Mint 1 lo</Typography>
+              </Box>
+            </Box>
           </Box>
 
 

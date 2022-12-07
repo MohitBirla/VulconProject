@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect } from 'react';
 import Paper from '@mui/material/Paper';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -24,13 +24,27 @@ import { Input } from '@mui/icons-material';
 import MyWallet from './MyWallet';
 import DataTable from './table';
 
+import { Web3Button, useAccount, useConnectModal, useBalance } from '@web3modal/react';
+import { useAuthContext } from '../../providers/AuthProvider';
+
 export default function MyFunds() {
-  
+
   const [age, setAge] = React.useState('');
+  const { connectWithEmail, address, connect, getBalance, balance } = useAuthContext()
 
   const handleChange = (event) => {
     setAge(event.target.value);
   };
+
+  useEffect(() => {
+    getBalance().then(bal => {
+      console.log(bal)
+    })
+
+    return () => {
+
+    }
+  }, [address])
 
   return (
     <Box className='top_main'>
@@ -118,14 +132,25 @@ export default function MyFunds() {
                           <Box className='bg-white mt-4' style={{ width: '100%', height: '1px' }} ></Box>
                           <Box className='d-flex align-items-center pt-4'>
                             <Typography style={{ color: '#989FAE' }} class=" text-p card-text mt-2">Total Main Wallet Balance</Typography>
-                            <Typography variant="h4" style={{ fontFamily: 'Beatrix Antiqua' }} className='ms-3 '><span>0 </span>Matic</Typography>
+                            <Typography variant="h4" style={{ fontFamily: 'Beatrix Antiqua' }} className='ms-3 '><span>{balance} </span>Matic</Typography>
                           </Box>
                           <Box className='bg-white mt-4' style={{ width: '100%', height: '1px' }} ></Box>
-
                           <Box class="d-md-flex d-xxl-block d-fhd-flex mt-3">
                             <Box style={{ color: '#989FAE' }} class="me-5 mb-2 mb-md-0 mb-xxl-2 mb-fhd-0">
                               Transfer to
-                              <Typography variant="h4" style={{ fontFamily: 'Beatrix Antiqua' }} class="mb-0 mt-2 text-white">Marketing Wallet</Typography>
+                              <FormControl class="row flex-grow-1 gx-1">
+                                <Box class="col-lg-6 col-8 position-relative mb-2 mb-sm-0">
+                                  <TextField
+                                    sx={{ border: 'none' }}
+                                    placeholder='0x'
+                                    className=' search_background_fund '
+
+                                    InputProps={{
+
+                                    }}
+                                  />
+                                </Box>
+                              </FormControl>
                             </Box>
                             <FormControl class="row flex-grow-1 gx-1">
                               <Box class="col-lg-6 col-8 position-relative mb-2 mb-sm-0">
@@ -133,11 +158,10 @@ export default function MyFunds() {
                                 <TextField
                                   // id="outlined-start-adornment"
                                   sx={{ border: 'none' }}
-                                  placeholder='search...'
+                                  placeholder='0.1'
                                   className=' search_background_fund '
 
                                   InputProps={{
-                                    startAdornment: <InputAdornment position="start"><SearchIcon /></InputAdornment>,
                                   }}
                                 />
                                 <Typography variant="h6" id="MainMax" type="button" class="p-0 OrangeText shadow-none  bg-transparent border-0 position-absolute end-0 top-0  mt-3 F-size-20 bottom-0 me-3  "> Max </Typography>
@@ -153,7 +177,7 @@ export default function MyFunds() {
                   </Box>
                   <Box className='row mt-5 swap_history'>
                     <Box className='col-lg-5 col-12' sx={{ mt: 2 }}>
-                      <Typography className='card-title1' variant="h1" style={{ fontSize: '24px', fontWeight: 'bold' }} >SWAPPING
+                      <Typography className='card-title1' variant="h1" style={{ fontSize: '24px', fontWeight: 'bold' }} >TRANSACTION
                         <Typography className='d-inline card-title2' variant="h1" style={{ fontSize: '24px', fontWeight: 'bold', color: "rgba(6, 205, 253, 1)" }} > HISTORY </Typography></Typography>
                       {/* <Typography variant='h1' sx={{mt:1,fontSize:'24px'}}  class="card-title1">Swapping  </Typography>
                       <Typography  variant='h1' sx={{mt:1,fontSize:'24px'}} className='card-title2'>History</Typography> */}
@@ -193,7 +217,7 @@ export default function MyFunds() {
               </Box>
 
               <Box>
-                <DataTable/> 
+                <DataTable />
               </Box>
             </Box>
 
@@ -205,11 +229,11 @@ export default function MyFunds() {
               role="tabpanel"
               aria-labelledby="pills-profile-tab"
             >
-            
-                <Box className="">
-                  <MyWallet />
-                </Box>
-             
+
+              <Box className="">
+                <MyWallet />
+              </Box>
+
             </Box>
             <Box
 
@@ -218,12 +242,12 @@ export default function MyFunds() {
               role="tabpanel"
               aria-labelledby="pills-wp-tab"
             >
-             
-                <Box className="gallery_main_container justify-content-center d-flex flex-wrap">
-                  <Nft />
 
-                </Box>
-              
+              <Box className="gallery_main_container justify-content-center d-flex flex-wrap">
+                <Nft />
+
+              </Box>
+
             </Box>
           </Box>
         </Box>
