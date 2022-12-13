@@ -115,7 +115,7 @@ export default function MyWallet() {
                                                     </Box>
                                                 </Grid>
                                                 <Grid item >
-                                                    <Box sx={{ color: 'rgba(141, 141, 141, 1)', fontWeight: 'bold' }}>MATIC 1010</Box>
+                                                    <Box sx={{ color: 'rgba(141, 141, 141, 1)', fontWeight: 'bold' }}>MATIC</Box>
 
                                                 </Grid>
                                                 <Grid item>

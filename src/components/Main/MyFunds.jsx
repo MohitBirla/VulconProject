@@ -46,11 +46,10 @@ export default function MyFunds() {
   }, [address])
 
   return (
-    <Box className='top_main'>
-      <Box className='main'>
-        <Box className=''>
-          <Box className=''>
-
+    <Box className='top_main pt-4 px-3'>
+      <Box>
+        <Box>
+          <Box>
             <Typography variant="h1" style={{ fontSize: '60px', fontWeight: 'bold', fontStyle: "italic" }} >MY
               <Typography className='d-inline' variant="h1" style={{ fontSize: '60px', fontWeight: 'bold', fontStyle: "italic", color: "rgba(6, 205, 253, 1)" }} > FUNDS </Typography></Typography>
             <Box className="events_list_tablist gallery_list mt-4">
@@ -71,7 +70,6 @@ export default function MyFunds() {
                       aria-controls="pills-home"
                       aria-selected="true"
                       startIcon={<PieChartIcon />}
-
                     >
                       MANAGE FUNDS
                     </Button>

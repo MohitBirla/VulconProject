@@ -38,7 +38,7 @@ export default function Dashboard() {
         <Box className="blur_color side_main rounded-5">
           <Box>
             <center className="pt-4 pb-4">
-              <h4 className=" fw-bold text-white" style={{ fontFamily: "Beatrix Antiqua",fontSize:'25px' }} >CODYPANDA</h4>
+              <h4 className=" fw-bold text-white" style={{ fontFamily: "Roboto,Helvetica,Arial,sans-serif",fontSize:'25px' }}  >CODYPANDA</h4>
                 <Avatar
                   className='mt-4'
                   alt="Remy Sharp"
@@ -107,20 +107,17 @@ export default function Dashboard() {
 
               </Box>
 
-              <Box className="mt-5  text-center pt-0 side-nav-link"
-
-              >
+              <Box className="mt-5  text-center pt-0 side-nav-link">
                 {/* <h5 className="m-0 pt-2">Log Out</h5> */}
                 <Button data-bs-toggle="pill"
                   aria-controls="pills-home"
-                  aria-selected="false" type='button' startIcon={<LogoutIcon />} className='nav-link pt-2 '>Log Out</Button>
-
+                  aria-selected="false" type='button' startIcon={<LogoutIcon />} className='nav-link pt-2'>Log Out</Button>
               </Box>
             </Box>
           </Box>
         </Box>
       </Box>
-      <Box className=' col-lg-9 col-md-9 col-12 text-white all_main'>
+      <Box className=' col-lg-9 col-md-9 col-12 text-white all_main mt-3'>
         {showdata === "MYFUNDS" ? <MyFunds /> : ""}
         {/* {showdata === "MYASSETS" ? <MyAssets /> : ""} */}
         {showdata === "MYPROFILE" ? <Profile /> : ""}
