@@ -120,7 +120,7 @@ export default function Dashboard() {
           </Box>
         </Box>
       </Box>
-      <Box className='px-lg-5 pt-2 col-lg-9 col-md-9 col-12 text-white all_main'>
+      <Box className=' col-lg-9 col-md-9 col-12 text-white all_main'>
         {showdata === "MYFUNDS" ? <MyFunds /> : ""}
         {/* {showdata === "MYASSETS" ? <MyAssets /> : ""} */}
         {showdata === "MYPROFILE" ? <Profile /> : ""}
