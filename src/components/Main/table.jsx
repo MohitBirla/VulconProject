@@ -147,7 +147,7 @@ export default function DataTable() {
   };
   return (
     <Box>
-         <Paper className='table_data' sx={{ width: '100%', overflow: 'hidden', padding: "5px", margin: "3% 0 5% 0", }}>
+         <Paper className='table_data' sx={{ width: '100%', padding: "5px", margin: "3% 0 5% 0", }}>
                 <TableContainer sx={{ maxHeight: 400 }}>
                   <Table stickyHeader aria-label=" table" sx={{}}>
                     <TableHead>
