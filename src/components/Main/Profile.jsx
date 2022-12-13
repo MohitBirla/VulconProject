@@ -15,11 +15,12 @@ import {
 import { FormControl } from "react-bootstrap";
 export default function Profile() {
   return (
-    <div className="blur_color px-5">
+    <Box className="profile_box" >
       <Typography
+      style={{ fontSize: '60px', fontWeight: 'bold', fontStyle: "italic" }}
         sx={{
-          fontFamily: "Eurostile LT Pro Unicode",
-          fontStyle: "italic",
+          fontFamily: "Roboto,Helvetica,Arial,sans-serif",
+        
           mt: 1,
           pt:3
         }}
@@ -28,10 +29,11 @@ export default function Profile() {
         PROFILE{" "}
         <Typography
           variant="h3"
+          style={{ fontSize: '60px', fontWeight: 'bold', fontStyle: "italic" }}
           sx={{
             color: "#06CDFD",
-            fontFamily: "Eurostile LT Pro Unicode",
-            fontStyle: "italic",
+            fontFamily: "Roboto,Helvetica,Arial,sans-serif",
+            
           }}
           className="d-inline"
         >
@@ -60,10 +62,11 @@ export default function Profile() {
                 <InputLabel className="text_label"  htmlFor="my-input">First Name</InputLabel>
 
                 <TextField
-                className="profile_input rounded-3"
+                className="profile_input  "
                   sx={{ mt: 1, "& fieldset": { border: 'none' }, }}
                   id="outlined-textarea"
                   placeholder="Enter Last Name"
+                  inputProps={{ style: { color: "white" } }} 
                   multiline
                   fullWidth
                 />
@@ -72,10 +75,11 @@ export default function Profile() {
                 </InputLabel>
 
                 <TextField
-                className="profile_input rounded-3"
+                className="profile_input  "
                   sx={{ mt: 1 , "& fieldset": { border: 'none' },}}
                   id="outlined-textarea"
                   placeholder="Enter Last Name"
+                  inputProps={{ style: { color: "white" } }} 
                   multiline
                   fullWidth
                 />
@@ -84,10 +88,11 @@ export default function Profile() {
            
                 <InputLabel  className="text_label"  htmlFor="my-input">Bio</InputLabel>
                 <TextField
-                className="profile_input rounded-3"
+                className="profile_input  "
                   sx={{ mt: 1 , "& fieldset": { border: 'none' },}}
                   id="outlined-textarea"
                   placeholder="Bio.........."
+                  inputProps={{ style: { color: "white" } }} 
                   multiline
                   fullWidth
                 />
@@ -98,14 +103,15 @@ export default function Profile() {
       </Box>
       <hr className="mb-2" />
      
-      <Grid container spacing={2} sx={{ m: 2 }}>
-        <Grid item lg={6} sm={12} md={12}>
+      <Grid container spacing={2} sx={{ m: 2}}>
+        <Grid item lg={6} sm={12} md={12} >
           <InputLabel className="text_label"  htmlFor="my-input">User Name</InputLabel>
           <TextField
-          className="profile_input rounded-3"
+          className="profile_input  "
             sx={{ mt: 1 , "& fieldset": { border: 'none' },}}
             id="outlined-textarea"
             placeholder="Enter User Name"
+            inputProps={{ style: { color: "white" } }} 
             multiline
             fullWidth
           />
@@ -113,10 +119,11 @@ export default function Profile() {
         <Grid item lg={6} sm={12} md={12}>
           <InputLabel className="text_label"  htmlFor="my-input">Your Website URL</InputLabel>
           <TextField
-          className="profile_input rounded-3"
+          className="profile_input  "
           sx={{ mt: 1 , "& fieldset": { border: 'none' },}}
             id="outlined-textarea"
             placeholder="http://"
+            inputProps={{ style: { color: "white" } }} 
             multiline
             fullWidth
           />
@@ -126,10 +133,11 @@ export default function Profile() {
         <Grid item lg={6} sm={12} md={12}>
           <InputLabel className="text_label"  htmlFor="my-input">Email Address</InputLabel>
           <TextField
-           className="profile_input rounded-3"
+           className="profile_input  "
            sx={{ mt: 1 , "& fieldset": { border: 'none' },}}
             id="outlined-textarea"
             placeholder="example@gmail.com"
+            inputProps={{ style: { color: "white" } }} 
             multiline
             fullWidth
           />
@@ -137,10 +145,11 @@ export default function Profile() {
         <Grid item lg={6} sm={12} md={12}>
           <InputLabel className="text_label"  htmlFor="my-input">Add Tagline</InputLabel>
           <TextField
-           className="profile_input rounded-3"
+           className="profile_input  "
            sx={{ mt: 1 , "& fieldset": { border: 'none' },}}
             id="outlined-textarea"
             placeholder="Enter tagline"
+            inputProps={{ style: { color: "white" } }} 
             multiline
             fullWidth
           />
@@ -152,10 +161,11 @@ export default function Profile() {
         <Grid item lg={6} sm={12} md={12}>
           <InputLabel className="text_label"  htmlFor="my-input">Twitter</InputLabel>
           <TextField
-            className="profile_input rounded-3"
+            className="profile_input  "
             sx={{ mt: 1 , "& fieldset": { border: 'none' },}}
             id="outlined-textarea"
             placeholder="Enter Your Name"
+            inputProps={{ style: { color: "white" } }} 
             multiline
             fullWidth
           />
@@ -163,9 +173,10 @@ export default function Profile() {
         <Grid item lg={6} sm={12} md={12}>
           <InputLabel className="text_label"  htmlFor="my-input">Discord</InputLabel>
           <TextField
- className="profile_input rounded-3"
- sx={{ mt: 1 , "& fieldset": { border: 'none' },}}
+            className="profile_input  "
+            sx={{ mt: 1 , "& fieldset": { border: 'none' },}}
             id="outlined-textarea"
+            inputProps={{ style: { color: "white" } }} 
             placeholder="https://"
             multiline
             fullWidth
@@ -176,10 +187,11 @@ export default function Profile() {
         <Grid item lg={6} sm={12} md={12}>
           <InputLabel className="text_label"  htmlFor="my-input">Telegram</InputLabel>
           <TextField
-            className="profile_input rounded-3"
+            className="profile_input  "
             sx={{ mt: 1 , "& fieldset": { border: 'none' },}}
             id="outlined-textarea"
             placeholder="example@gmail.com"
+            inputProps={{ style: { color: "white" } }} 
             multiline
             fullWidth
           />
@@ -187,23 +199,25 @@ export default function Profile() {
         <Grid item lg={6} sm={12} md={12}>
           <InputLabel className="text_label"  htmlFor="my-input">Medium</InputLabel>
           <TextField
-           className="profile_input rounded-3"
+           className="profile_input  "
            sx={{ mt: 1 , "& fieldset": { border: 'none' },}}
             id="outlined-textarea"
             placeholder="Enter tagline"
+            inputProps={{ style: { color: "white" } }} 
             multiline
             fullWidth
           />
         </Grid>
       </Grid>
     <Box className="text-end mt-4">
-    <Button sx={{m:2}} variant="contained" size="large">
+    <Button sx={{m:2}} variant="contained" size="large" className="Profile_btn">
      Save
     </Button> 
-    <Button sx={{m:2}} variant="outlined" size="large">
+    <Button sx={{m:2}} variant="outlined" size="large" className="Profile_btn">
     Discard
         </Button>
+       
     </Box>
-    </div>
+    </Box>
   );
 }

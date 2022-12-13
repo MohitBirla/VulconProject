@@ -218,7 +218,7 @@ export default function Nft() {
                   aria-controls="pills-All"
                   aria-selected="false"
                 >
-                  All
+                  {/* All */}
                 </Typography>
               </Box>
               <Box item className="nav-item linked" role="presentation">
@@ -233,7 +233,7 @@ export default function Nft() {
                   // aria-controls="pills-CategaryOne"
                   aria-selected="false"
                 >
-                  Categary 01
+                  {/* Categary 01 */}
                 </Typography>
               </Box>
               <Box item className="nav-item linked" role="presentation">
@@ -248,7 +248,7 @@ export default function Nft() {
                   // aria-controls="pills-CategaryTwo"
                   aria-selected="false"
                 >
-                  Categary 02
+                  {/* Categary 02 */}
                 </Typography>
               </Box>
               {/* <Box className="nav-item linked" role="presentation">
@@ -354,7 +354,7 @@ export default function Nft() {
 
               <Grid item lg={4} md={12} sm={12}>
                     <Box
-                      className="nav nav-pills  tabs_events gallery_image_list gap-3 ps-lg-4 ps-md-4 ps-sm-4"
+                      className="nav nav-pills  tabs_events gallery_image_list gap-2 ps-lg-4 ps-md-4 ps-sm-4"
                       id="pills-tab"
                       role="tablist"
                     >
@@ -409,7 +409,7 @@ export default function Nft() {
             <Grid container spacing={3}>
               {nftList?.tokens.map((dt) => (
                 <Grid item xs={6} md={3}>
-                  <Box className="Nftbox" sx={{mt: 3,mb:3, px: 2, py: 3 }}>
+                  <Box className="Nftbox" sx={{mt: 2, px: 2, py: 3 }}>
                     <Box variant="div" sx={{ mx: 2 }}></Box>
                     <Box
                       component="img"
