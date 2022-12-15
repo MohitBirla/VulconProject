@@ -102,6 +102,9 @@ body::-webkit-scrollbar {
 .side-nav-link{
   color:white !important ;
   cursor: pointer;
+  font-family: "Eurostile LT Pro Unicode" !important;
+  font-style: italic !important;
+  font-weight: "600" !important;
 
 }
 /* //////////////////////////////// NFT //////////////////////////////// */
@@ -399,22 +402,26 @@ input[type=number] {
 }
 
 .profile_input{
-  border-width: 1.5px !important;
-  border-style: solid !important;
-  border-image: linear-gradient(to right, #129dde,  #ffffff,#129dde, #ffffff,#129dde, #ffffff) 1 !important;
-  border-radius: 0px !important;
-  background:rgba(3, 3, 3, 0.2);
- 
+  background: 
+  linear-gradient(#0a0915c6 0 0) padding-box, /*this is your grey background*/
+  linear-gradient(to right, #129dde,  #ffffff,#129dde,#ffffff,#129dde,#ffffff) border-box !important;
+color: #313149 !important;
+border: 3px solid transparent !important;
+border-radius: 15px !important;
   /* padding: 18.5px 40px; */
 }
 .profile_box{
-  /* padding: 10px 40px 10px 10px; */
+  padding: 10px 40px 10px 10px;
 }
 .Profile_btn{
+  background:   linear-gradient(#129dde 0 0) padding-box, /*this is your grey background*/  linear-gradient(to right, #129dde,  #ffffff,#129dde,#ffffff,#129dde,#ffffff) border-box !important;
   color: white !important;
-  border-width: 2px !important;
-  border-style: solid !important;
-  border-image: linear-gradient(to right, #129dde,  #ffffff,#129dde, #ffffff,#129dde, #ffffff) 2 round!important;
+  border: 3px solid transparent !important;
+  border-radius: 10px !important;
+  -webkit-border-radius: 10px !important;
+  -moz-border-radius: 10px !important;
+  -ms-border-radius: 10px !important;
+  -o-border-radius: 10px !important;
 }
 
 /* ////////////////////////////////// media Queries /////////////////////////////////////////////// */
@@ -439,6 +446,9 @@ input[type=number] {
   .table_data{
     overflow-x: scroll;
   }
+  .profile_box{
+  padding: 10px 0px 10px 0px;
+  } 
 }
 
 

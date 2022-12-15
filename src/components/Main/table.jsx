@@ -11,8 +11,16 @@ import Box from '@mui/material/Box'
 
 
 const columns = [
-    { id: 'Id', label: 'Id', minWidth: 100 },
-    { id: 'Type', label: 'Type', minWidth: 100 },
+    { 
+      id: 'Id',
+      label: 'Id',
+      minWidth: 100 
+    },
+    { 
+      id: 'Type',
+      label: 'Type', 
+      minWidth: 100 
+    },
     {
       id: 'From Address',
       label: 'From Address',
