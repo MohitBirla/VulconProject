@@ -48,7 +48,7 @@ export default function Nft() {
 
   return (
     <>
-      <Box className="">
+      <Box className="pb-3">
         <Box className="mt-5 nftMainBox">
           <Typography
             variant="h1"

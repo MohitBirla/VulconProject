@@ -57,8 +57,8 @@ export default function Profile() {
             </Typography>
           </Grid>
           <Grid item lg={9} sm={12} md={7}>
-            <Grid container spacing={2} sx={{ m: 2 }}>
-              <Grid item lg={6} sm={12} md={12}>
+            <Grid container spacing={2}   >
+              <Grid item lg={6} sm={12} md={12} className="w-100">
                 <InputLabel className="text_label"  htmlFor="my-input">First Name</InputLabel>
 
                 <TextField
@@ -67,7 +67,7 @@ export default function Profile() {
                   id="outlined-textarea"
                   placeholder="Enter Last Name"
                   inputProps={{ style: { color: "white" } }} 
-                  multiline
+                    
                   fullWidth
                 />
                 <InputLabel sx={{ mt: 2 }} className="text_label"  htmlFor="my-input">
@@ -80,11 +80,11 @@ export default function Profile() {
                   id="outlined-textarea"
                   placeholder="Enter Last Name"
                   inputProps={{ style: { color: "white" } }} 
-                  multiline
+                    
                   fullWidth
                 />
               </Grid>
-              <Grid item lg={6} sm={12} md={12}>
+              <Grid item lg={6} sm={12} md={12} className="w-100 ">
            
                 <InputLabel  className="text_label"  htmlFor="my-input">Bio</InputLabel>
                 <TextField
@@ -103,8 +103,8 @@ export default function Profile() {
       </Box>
       <hr className="mb-2" />
      
-      <Grid container spacing={2} sx={{ m: 2}}>
-        <Grid item lg={6} sm={12} md={12} >
+      <Grid container spacing={2}>
+        <Grid item lg={6} sm={12} md={12} className="w-100 mt-3">
           <InputLabel className="text_label"  htmlFor="my-input">User Name</InputLabel>
           <TextField
           className="profile_input  "
@@ -112,11 +112,11 @@ export default function Profile() {
             id="outlined-textarea"
             placeholder="Enter User Name"
             inputProps={{ style: { color: "white" } }} 
-            multiline
+              
             fullWidth
           />
         </Grid>
-        <Grid item lg={6} sm={12} md={12}>
+        <Grid item lg={6} sm={12} md={12} className="w-100 mt-3">
           <InputLabel className="text_label"  htmlFor="my-input">Your Website URL</InputLabel>
           <TextField
           className="profile_input  "
@@ -124,13 +124,13 @@ export default function Profile() {
             id="outlined-textarea"
             placeholder="http://"
             inputProps={{ style: { color: "white" } }} 
-            multiline
+              
             fullWidth
           />
         </Grid>
       </Grid>
-      <Grid container spacing={2} sx={{ m: 2 }}>
-        <Grid item lg={6} sm={12} md={12}>
+      <Grid container spacing={2}  >
+        <Grid item lg={6} sm={12} md={12} className="w-100 mt-3">
           <InputLabel className="text_label"  htmlFor="my-input">Email Address</InputLabel>
           <TextField
            className="profile_input  "
@@ -138,11 +138,11 @@ export default function Profile() {
             id="outlined-textarea"
             placeholder="example@gmail.com"
             inputProps={{ style: { color: "white" } }} 
-            multiline
+              
             fullWidth
           />
         </Grid>
-        <Grid item lg={6} sm={12} md={12}>
+        <Grid item lg={6} sm={12} md={12} className="w-100 mt-3">
           <InputLabel className="text_label"  htmlFor="my-input">Add Tagline</InputLabel>
           <TextField
            className="profile_input  "
@@ -150,15 +150,15 @@ export default function Profile() {
             id="outlined-textarea"
             placeholder="Enter tagline"
             inputProps={{ style: { color: "white" } }} 
-            multiline
+              
             fullWidth
           />
         </Grid>
       </Grid>
       <hr className="mt-5"/>
 
-      <Grid container spacing={2} sx={{ m: 2 }}>
-        <Grid item lg={6} sm={12} md={12}>
+      <Grid container spacing={2}  >
+        <Grid item lg={6} sm={12} md={12} className="w-100 mt-3">
           <InputLabel className="text_label"  htmlFor="my-input">Twitter</InputLabel>
           <TextField
             className="profile_input  "
@@ -166,11 +166,11 @@ export default function Profile() {
             id="outlined-textarea"
             placeholder="Enter Your Name"
             inputProps={{ style: { color: "white" } }} 
-            multiline
+              
             fullWidth
           />
         </Grid>
-        <Grid item lg={6} sm={12} md={12}>
+        <Grid item lg={6} sm={12} md={12} className="w-100 mt-3">
           <InputLabel className="text_label"  htmlFor="my-input">Discord</InputLabel>
           <TextField
             className="profile_input  "
@@ -178,13 +178,13 @@ export default function Profile() {
             id="outlined-textarea"
             inputProps={{ style: { color: "white" } }} 
             placeholder="https://"
-            multiline
+              
             fullWidth
           />
         </Grid>
       </Grid>
-      <Grid container spacing={2} sx={{ m: 2 }}>
-        <Grid item lg={6} sm={12} md={12}>
+      <Grid container spacing={2} >
+        <Grid item lg={6} sm={12} md={12} className="w-100 mt-3">
           <InputLabel className="text_label"  htmlFor="my-input">Telegram</InputLabel>
           <TextField
             className="profile_input  "
@@ -192,19 +192,19 @@ export default function Profile() {
             id="outlined-textarea"
             placeholder="example@gmail.com"
             inputProps={{ style: { color: "white" } }} 
-            multiline
+              
             fullWidth
           />
         </Grid>
-        <Grid item lg={6} sm={12} md={12}>
+        <Grid item lg={6} sm={12} md={12} className="w-100 mt-3" >
           <InputLabel className="text_label"  htmlFor="my-input">Medium</InputLabel>
           <TextField
-           className="profile_input  "
+           className="profile_input   "
            sx={{ mt: 1 , "& fieldset": { border: 'none' },}}
             id="outlined-textarea"
             placeholder="Enter tagline"
             inputProps={{ style: { color: "white" } }} 
-            multiline
+              
             fullWidth
           />
         </Grid>
