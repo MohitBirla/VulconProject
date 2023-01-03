@@ -299,9 +299,11 @@ export default function Nft() {
                   <Grid item xs={5}>
                     <Box className="">
                       <TextField
-                        sx={{ border: "none" }}
+                        // sx={{ border: "none" }}
+                        sx={{"& fieldset": { border: 'none' }, }}
+                        inputProps={{ style: { color: "white" } }} 
                         placeholder="search..."
-                        className=" search_background_fund rounded-3"
+                        className=" search_background_fund rounded-3 profile_input"
                         InputProps={{
                           startAdornment: (
                             <InputAdornment
@@ -317,16 +319,18 @@ export default function Nft() {
                   </Grid>
 
                   <Grid item xs={5}>
-                    <FormControl className="bg-none  selectBtn">
+                    <FormControl className="bg-none  selectBtn profile_input">
                       <Select
-                      className="text-white"
+                        sx={{"& fieldset": { border: 'none' }, }}
+
+                        className="text-white"
                         value={age}
                         onChange={handleChange}
                         displayEmpty
                         inputProps={{ "aria-label": "Without label" }}
                       >
                         <MenuItem  placeholder="" value="">
-                          <em>Selet</em>
+                          <em>Select</em>
                         </MenuItem>
                         <MenuItem  value={10}>Ten</MenuItem>
                         <MenuItem value={20}>Twenty</MenuItem>

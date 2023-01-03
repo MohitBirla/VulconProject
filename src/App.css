@@ -306,15 +306,17 @@ border-radius: 5px;
 .BtnBorder {
   position: relative;
   font-family: "Trueno SemiBold";
-  padding: 5px 15px !important;
-  font-size: 20px !important;
+  padding: 5px 25px !important;
+  font-size: 25px !important;
   line-height: 1.5 !important;
-  background:   linear-gradient(#129dde 0 0) padding-box, 
-                linear-gradient(to right, #129dde,  #ffffff,#129dde,#ffffff,#129dde,#ffffff) border-box !important;
+  /* background: linear-gradient(to right, rgba(18, 157, 222, 1), rgba(21, 43, 110, 1)); */
+  background: linear-gradient(rgba(18, 157, 222, 1), rgba(21, 43, 110, 1));
+
   color: white !important;
   border: 3px solid transparent !important;
-  border-radius: 10px !important;
-  margin-top: 10px !important;
+  border-radius:15px !important;
+  margin-top: 50px !important;
+  
 }
 .bg-transparent {
   --bs-bg-opacity: 1;
@@ -322,10 +324,6 @@ border-radius: 5px;
 }
 .border-0 {
   border: 0 !important;
-}
-
-.form-control.h-pxl-48, .form-select.h-pxl-48 {
-  min-height: 48px;
 }
 .form-control, .form-select {
   background-color: #202022;
@@ -390,14 +388,13 @@ input[type=number] {
 }
 
 .profile_input{
-  background: 
-  linear-gradient(#0a0915c6 0 0) padding-box, /*this is your grey background*/
-  linear-gradient(to right, #129dde,  #ffffff,#129dde,#ffffff,#129dde,#ffffff) border-box !important;
-color: #313149 !important;
-border: 3px solid transparent !important;
-border-radius: 15px !important;
-  /* padding: 18.5px 40px; */
-}
+  border-image: linear-gradient(#129dde,  #ffffff,#129dde,#ffffff,#129dde,#ffffff)10 !important;
+  border-width: 2px !important;
+  border-style: solid !important;
+  background-color: 
+  rgba(3, 3, 3, 0.2) !important;
+  }
+  
 .profile_box{
   padding: 10px 40px 10px 10px;
 }
