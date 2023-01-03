@@ -131,7 +131,7 @@ export default function MyFunds() {
                             <Typography style={{ color: '#989FAE' }} class=" text-p card-text mt-2">Total Main Wallet Balance</Typography>
                             <Typography variant="h4" style={{ fontFamily: 'Beatrix Antiqua' }} className='ms-3 '><span>{balance} </span>Matic</Typography>
                           </Box>
-                          
+
                           <Box className='bg-white mt-4' style={{ width: '100%', height: '1.5px' }} ></Box>
 
                           <Box class="d-md-flex d-xxl-block d-fhd-flex mt-3">
@@ -140,40 +140,65 @@ export default function MyFunds() {
                               Transfer to
                               <Grid container spacing={3}>
 
-                              <Grid item xs={6} sm={6} md={6}>
-                              <Box class=" position-relative mb-2 mb-sm-0">
-                                  <TextField
-                                    sx={{ border: 'none' }}
-                                    placeholder='0x'
-                                    className=' search_background_fund'
-                                    InputProps={{
-                                    }}
-                                  />
-                                </Box>
+                                <Grid item xs={6} sm={6} md={6}>
+                                  <Box class=" position-relative mb-2 mb-sm-0">
+                                    <TextField
+                                      sx={{ "& fieldset": { border: 'none' }, }}
+
+                                      inputProps={{ style: { color: "white" } }}
+                                      placeholder='0x'
+                                      className=' search_background_fund profile_input'
+                                      InputProps={{
+                                      }}
+                                    />
+                                  </Box>
+                                </Grid>
+                                <Grid item xs={6} sm={6} md={6}>
+                                  <Box class="position-relative mb-2 mb-sm-0">
+                                    {/* <input type="number" outline="none" id="FromMainPYR" min="1" class=" form-control shadow-none h-pxl-48 rounded-1 text-white" placeholder="Enter Amount of MATIC" /> */}
+                                    <TextField
+
+                                      sx={{ "& fieldset": { border: 'none' }, }}
+
+                                      inputProps={{ style: { color: "white" } }}
+                                      placeholder='0.1'
+                                      className=' search_background_fund profile_input '
+                                      InputProps={{
+                                      }}
+                                    />
+                                    <Typography variant="h6" id="MainMax" type="button" class="p-0 OrangeText shadow-none  bg-transparent border-0 position-absolute end-0 top-0  mt-3 F-size-20 bottom-0 me-3  "> Max </Typography>
+                                  </Box>
+                                </Grid>
                               </Grid>
-                              <Grid item xs={6} sm={6} md={6}>
-                              <Box class="position-relative mb-2 mb-sm-0">
-                                {/* <input type="number" outline="none" id="FromMainPYR" min="1" class=" form-control shadow-none h-pxl-48 rounded-1 text-white" placeholder="Enter Amount of MATIC" /> */}
-                                <TextField
-                                  sx={{ border: 'none' }}
-                                  placeholder='0.1'
-                                  className=' search_background_fund '
-                                  InputProps={{
-                                  }}
-                                />
-                                <Typography variant="h6" id="MainMax" type="button" class="p-0 OrangeText shadow-none  bg-transparent border-0 position-absolute end-0 top-0  mt-3 F-size-20 bottom-0 me-3  "> Max </Typography>
-                              </Box>
-                              </Grid>
-                              </Grid>
-                              <FormControl className='text-end'>
-                              <Box class="text-end">
-                                <Button type="button" id="ConvertMainToMarket" class="BtnBorder" >Transfer</Button>
-                              </Box>
-                            </FormControl>
                               
+
+
                             </Box>
-                           
+
                           </Box>
+                          <Box>
+                          <Grid container sx={{  display: 'flex',
+                                    alignItems: 'flex-end',
+                                    flexDirection: 'column',}} spacing={3}>
+
+                                
+                                
+                                  <Box class="position-relative">
+
+                                    <Button type="button" id="ConvertMainToMarket" class="BtnBorder" >Transfer</Button>
+                                    {/* <Button
+                                    type="button"
+                                    className='withdrawBtn'
+
+                                  >
+                                    Withdraw
+                                  </Button> */}
+
+                                  </Box>
+                             
+                              </Grid>
+                          </Box>
+                         
                         </Box>
                       </Box>
                     </Box>
